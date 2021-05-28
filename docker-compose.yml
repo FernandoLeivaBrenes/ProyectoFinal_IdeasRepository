@@ -1,0 +1,37 @@
+version: '3.8'
+services:
+    ideasrepository-mysql:
+        command: ["--default-authentication-plugin=mysql_native_password"]
+        container_name: ideasrepository-mysql
+        image: mysql:8.0
+        ports:
+            - 3306:3306
+        environment:
+            MYSQL_DATABASE: 'ideasrepository_db'
+            MYSQL_USER: ideasrepository
+            MYSQL_PASSWORD: ideasrepository_db
+            MYSQL_ROOT_PASSWORD: root
+        networks:
+            - default
+        #volumes:
+            #- '.docker/.mysql_data/:/var/lib/mysql'
+            #- '.docker/.mysql_data/my.cnf:/etc/mysql/conf.d/mysql.cnf'
+    
+    ideasrepository-app:
+        build: 
+            context: .
+            dockerfile: .docker/Dockerfile
+        container_name: ideasrepository-app
+        depends_on:
+            - ideasrepository-mysql
+        networks:
+            - default
+        ports:
+            - 80:80
+        tty: true
+        volumes:
+            - ./IdeasRepository:/var/www/html
+            
+networks:
+    default:
+        driver: bridge
