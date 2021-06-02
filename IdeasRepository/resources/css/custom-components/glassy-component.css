@@ -1,0 +1,21 @@
+@layer components {
+    .glass-Effect{
+        @apply backdrop-filter backdrop-blur-md bg-opacity-10;
+    }
+    .glass-AfterEffect{
+        @apply relative;
+        @apply bg-transparent;
+    }
+    .glass-AfterEffect::before{
+        content:"";
+        @apply absolute;
+        /* apply bg-gradient-to-br from-gray-200 via-white to-gray-300; */
+        @apply bg-white;
+        @apply block;
+        @apply h-full w-full;
+        @apply filter blur brightness-100;
+        @apply left-0 top-0;
+        @apply opacity-90;
+        @apply -z-10;
+    }
+}

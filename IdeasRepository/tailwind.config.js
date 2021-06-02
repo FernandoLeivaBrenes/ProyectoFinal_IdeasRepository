@@ -10,17 +10,29 @@ module.exports = {
 
     theme: {
         extend: {
+            backgroundImage: theme => ({
+                'ideaslogo': "url('/assets/img/icons/android-chrome-512x512.png')",
+            }),
             fontFamily: {
-                sans: ['Nunito', ...defaultTheme.fontFamily.sans],
+                sans: ['Lato', ...defaultTheme.fontFamily.sans],
+            },
+            zIndex: {
+                '-10': '-10',
+                '-20': '-20',
+                '-30': '-30',
+                '-40': '-40',
             },
         },
     },
 
     variants: {
         extend: {
-            opacity: ['disabled'],
+            opacity: ['responsive', 'hover', 'focus', 'disabled'],
         },
     },
 
-    plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
+    plugins: [
+        require('@tailwindcss/forms'),
+        require('@tailwindcss/typography'),
+    ],
 };

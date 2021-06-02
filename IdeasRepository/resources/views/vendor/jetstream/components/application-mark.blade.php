@@ -1,0 +1,1 @@
+<img src="{{asset('assets/img/icons/android-chrome-512x512.png')}}" alt="logo" {{ $attributes }} />

@@ -366,7 +366,7 @@ ul {
  */
 
 html {
-  font-family: Nunito, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 1 */
+  font-family: Lato, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 1 */
   line-height: 1.5; /* 2 */
 }
 
@@ -713,6 +713,95 @@ select {
 
 [type='file']:focus {
   outline: 1px auto -webkit-focus-ring-color;
+}
+
+h1
+    {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+h2 
+    {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+h3, legend
+    {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+h4 
+    {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+h5 
+    {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+h6 
+    {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+html
+    {
+  /* background-color: #3D3D3D; */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%233d3d3d' fill-opacity='0.50'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+legend
+    {
+  /* top: -18px; */
+}
+
+.bg-public
+    {
+  --tw-bg-opacity: 1;
+  background-color: rgba(52, 211, 153, var(--tw-bg-opacity));
+}
+
+.border-public
+    {
+  --tw-border-opacity: 1;
+  border-color: rgba(52, 211, 153, var(--tw-border-opacity));
+}
+
+.bg-protected
+    {
+  --tw-bg-opacity: 1;
+  background-color: rgba(252, 211, 77, var(--tw-bg-opacity));
+}
+
+.border-protected
+    {
+  --tw-border-opacity: 1;
+  border-color: rgba(252, 211, 77, var(--tw-border-opacity));
+}
+
+.bg-private
+    {
+  --tw-bg-opacity: 1;
+  background-color: rgba(239, 68, 68, var(--tw-bg-opacity));
+}
+
+.border-private
+    {
+  --tw-border-opacity: 1;
+  border-color: rgba(239, 68, 68, var(--tw-border-opacity));
+}
+
+.right_top
+    {
+  top: -1.5em;
+  right: -1.5em;
 }
 
 .container {
@@ -5710,6 +5799,10 @@ select {
 
 .bg-gradient-to-tl {
   background-image: linear-gradient(to top left, var(--tw-gradient-stops));
+}
+
+.bg-ideaslogo {
+  background-image: url('/assets/img/icons/android-chrome-512x512.png');
 }
 
 .from-transparent {
@@ -12709,7 +12802,7 @@ select {
 }
 
 .font-sans {
-  font-family: Nunito, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: Lato, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .font-serif {
@@ -28674,6 +28767,22 @@ select {
   z-index: auto;
 }
 
+.-z-10 {
+  z-index: -10;
+}
+
+.-z-20 {
+  z-index: -20;
+}
+
+.-z-30 {
+  z-index: -30;
+}
+
+.-z-40 {
+  z-index: -40;
+}
+
 .focus-within\:z-0:focus-within {
   z-index: 0;
 }
@@ -28702,6 +28811,22 @@ select {
   z-index: auto;
 }
 
+.focus-within\:-z-10:focus-within {
+  z-index: -10;
+}
+
+.focus-within\:-z-20:focus-within {
+  z-index: -20;
+}
+
+.focus-within\:-z-30:focus-within {
+  z-index: -30;
+}
+
+.focus-within\:-z-40:focus-within {
+  z-index: -40;
+}
+
 .focus\:z-0:focus {
   z-index: 0;
 }
@@ -28728,6 +28853,22 @@ select {
 
 .focus\:z-auto:focus {
   z-index: auto;
+}
+
+.focus\:-z-10:focus {
+  z-index: -10;
+}
+
+.focus\:-z-20:focus {
+  z-index: -20;
+}
+
+.focus\:-z-30:focus {
+  z-index: -30;
+}
+
+.focus\:-z-40:focus {
+  z-index: -40;
 }
 
 .isolate {
@@ -33372,6 +33513,54 @@ select {
 
 .backdrop-sepia {
   --tw-backdrop-sepia: sepia(100%);
+}
+
+.glass-Effect{
+  --tw-bg-opacity: 0.1;
+  --tw-backdrop-blur: var(--tw-empty,/*!*/ /*!*/);
+  --tw-backdrop-brightness: var(--tw-empty,/*!*/ /*!*/);
+  --tw-backdrop-contrast: var(--tw-empty,/*!*/ /*!*/);
+  --tw-backdrop-grayscale: var(--tw-empty,/*!*/ /*!*/);
+  --tw-backdrop-hue-rotate: var(--tw-empty,/*!*/ /*!*/);
+  --tw-backdrop-invert: var(--tw-empty,/*!*/ /*!*/);
+  --tw-backdrop-opacity: var(--tw-empty,/*!*/ /*!*/);
+  --tw-backdrop-saturate: var(--tw-empty,/*!*/ /*!*/);
+  --tw-backdrop-sepia: var(--tw-empty,/*!*/ /*!*/);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  --tw-backdrop-blur: blur(12px);
+}
+
+.glass-AfterEffect{
+  position: relative;
+  background-color: transparent;
+}
+
+.glass-AfterEffect::before{
+  content:"";
+  position: absolute;
+  /* apply bg-gradient-to-br from-gray-200 via-white to-gray-300; */
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+  display: block;
+  height: 100%;
+  width: 100%;
+  --tw-blur: var(--tw-empty,/*!*/ /*!*/);
+  --tw-brightness: var(--tw-empty,/*!*/ /*!*/);
+  --tw-contrast: var(--tw-empty,/*!*/ /*!*/);
+  --tw-grayscale: var(--tw-empty,/*!*/ /*!*/);
+  --tw-hue-rotate: var(--tw-empty,/*!*/ /*!*/);
+  --tw-invert: var(--tw-empty,/*!*/ /*!*/);
+  --tw-saturate: var(--tw-empty,/*!*/ /*!*/);
+  --tw-sepia: var(--tw-empty,/*!*/ /*!*/);
+  --tw-drop-shadow: var(--tw-empty,/*!*/ /*!*/);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+  --tw-blur: blur(8px);
+  --tw-brightness: brightness(1);
+  top: 0px;
+  left: 0px;
+  opacity: 0.9;
+  z-index: -10;
 }
 
 @media (min-width: 640px) {
@@ -38370,6 +38559,10 @@ select {
 
   .sm\:bg-gradient-to-tl {
     background-image: linear-gradient(to top left, var(--tw-gradient-stops));
+  }
+
+  .sm\:bg-ideaslogo {
+    background-image: url('/assets/img/icons/android-chrome-512x512.png');
   }
 
   .sm\:from-transparent {
@@ -45369,7 +45562,7 @@ select {
   }
 
   .sm\:font-sans {
-    font-family: Nunito, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: Lato, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
   .sm\:font-serif {
@@ -61321,6 +61514,22 @@ select {
     z-index: auto;
   }
 
+  .sm\:-z-10 {
+    z-index: -10;
+  }
+
+  .sm\:-z-20 {
+    z-index: -20;
+  }
+
+  .sm\:-z-30 {
+    z-index: -30;
+  }
+
+  .sm\:-z-40 {
+    z-index: -40;
+  }
+
   .sm\:focus-within\:z-0:focus-within {
     z-index: 0;
   }
@@ -61349,6 +61558,22 @@ select {
     z-index: auto;
   }
 
+  .sm\:focus-within\:-z-10:focus-within {
+    z-index: -10;
+  }
+
+  .sm\:focus-within\:-z-20:focus-within {
+    z-index: -20;
+  }
+
+  .sm\:focus-within\:-z-30:focus-within {
+    z-index: -30;
+  }
+
+  .sm\:focus-within\:-z-40:focus-within {
+    z-index: -40;
+  }
+
   .sm\:focus\:z-0:focus {
     z-index: 0;
   }
@@ -61375,6 +61600,22 @@ select {
 
   .sm\:focus\:z-auto:focus {
     z-index: auto;
+  }
+
+  .sm\:focus\:-z-10:focus {
+    z-index: -10;
+  }
+
+  .sm\:focus\:-z-20:focus {
+    z-index: -20;
+  }
+
+  .sm\:focus\:-z-30:focus {
+    z-index: -30;
+  }
+
+  .sm\:focus\:-z-40:focus {
+    z-index: -40;
   }
 
   .sm\:isolate {
@@ -70862,6 +71103,10 @@ select {
     background-image: linear-gradient(to top left, var(--tw-gradient-stops));
   }
 
+  .md\:bg-ideaslogo {
+    background-image: url('/assets/img/icons/android-chrome-512x512.png');
+  }
+
   .md\:from-transparent {
     --tw-gradient-from: transparent;
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 0, 0, 0));
@@ -77859,7 +78104,7 @@ select {
   }
 
   .md\:font-sans {
-    font-family: Nunito, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: Lato, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
   .md\:font-serif {
@@ -93811,6 +94056,22 @@ select {
     z-index: auto;
   }
 
+  .md\:-z-10 {
+    z-index: -10;
+  }
+
+  .md\:-z-20 {
+    z-index: -20;
+  }
+
+  .md\:-z-30 {
+    z-index: -30;
+  }
+
+  .md\:-z-40 {
+    z-index: -40;
+  }
+
   .md\:focus-within\:z-0:focus-within {
     z-index: 0;
   }
@@ -93839,6 +94100,22 @@ select {
     z-index: auto;
   }
 
+  .md\:focus-within\:-z-10:focus-within {
+    z-index: -10;
+  }
+
+  .md\:focus-within\:-z-20:focus-within {
+    z-index: -20;
+  }
+
+  .md\:focus-within\:-z-30:focus-within {
+    z-index: -30;
+  }
+
+  .md\:focus-within\:-z-40:focus-within {
+    z-index: -40;
+  }
+
   .md\:focus\:z-0:focus {
     z-index: 0;
   }
@@ -93865,6 +94142,22 @@ select {
 
   .md\:focus\:z-auto:focus {
     z-index: auto;
+  }
+
+  .md\:focus\:-z-10:focus {
+    z-index: -10;
+  }
+
+  .md\:focus\:-z-20:focus {
+    z-index: -20;
+  }
+
+  .md\:focus\:-z-30:focus {
+    z-index: -30;
+  }
+
+  .md\:focus\:-z-40:focus {
+    z-index: -40;
   }
 
   .md\:isolate {
@@ -103352,6 +103645,10 @@ select {
     background-image: linear-gradient(to top left, var(--tw-gradient-stops));
   }
 
+  .lg\:bg-ideaslogo {
+    background-image: url('/assets/img/icons/android-chrome-512x512.png');
+  }
+
   .lg\:from-transparent {
     --tw-gradient-from: transparent;
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 0, 0, 0));
@@ -110349,7 +110646,7 @@ select {
   }
 
   .lg\:font-sans {
-    font-family: Nunito, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: Lato, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
   .lg\:font-serif {
@@ -126301,6 +126598,22 @@ select {
     z-index: auto;
   }
 
+  .lg\:-z-10 {
+    z-index: -10;
+  }
+
+  .lg\:-z-20 {
+    z-index: -20;
+  }
+
+  .lg\:-z-30 {
+    z-index: -30;
+  }
+
+  .lg\:-z-40 {
+    z-index: -40;
+  }
+
   .lg\:focus-within\:z-0:focus-within {
     z-index: 0;
   }
@@ -126329,6 +126642,22 @@ select {
     z-index: auto;
   }
 
+  .lg\:focus-within\:-z-10:focus-within {
+    z-index: -10;
+  }
+
+  .lg\:focus-within\:-z-20:focus-within {
+    z-index: -20;
+  }
+
+  .lg\:focus-within\:-z-30:focus-within {
+    z-index: -30;
+  }
+
+  .lg\:focus-within\:-z-40:focus-within {
+    z-index: -40;
+  }
+
   .lg\:focus\:z-0:focus {
     z-index: 0;
   }
@@ -126355,6 +126684,22 @@ select {
 
   .lg\:focus\:z-auto:focus {
     z-index: auto;
+  }
+
+  .lg\:focus\:-z-10:focus {
+    z-index: -10;
+  }
+
+  .lg\:focus\:-z-20:focus {
+    z-index: -20;
+  }
+
+  .lg\:focus\:-z-30:focus {
+    z-index: -30;
+  }
+
+  .lg\:focus\:-z-40:focus {
+    z-index: -40;
   }
 
   .lg\:isolate {
@@ -135842,6 +136187,10 @@ select {
     background-image: linear-gradient(to top left, var(--tw-gradient-stops));
   }
 
+  .xl\:bg-ideaslogo {
+    background-image: url('/assets/img/icons/android-chrome-512x512.png');
+  }
+
   .xl\:from-transparent {
     --tw-gradient-from: transparent;
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 0, 0, 0));
@@ -142839,7 +143188,7 @@ select {
   }
 
   .xl\:font-sans {
-    font-family: Nunito, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: Lato, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
   .xl\:font-serif {
@@ -158791,6 +159140,22 @@ select {
     z-index: auto;
   }
 
+  .xl\:-z-10 {
+    z-index: -10;
+  }
+
+  .xl\:-z-20 {
+    z-index: -20;
+  }
+
+  .xl\:-z-30 {
+    z-index: -30;
+  }
+
+  .xl\:-z-40 {
+    z-index: -40;
+  }
+
   .xl\:focus-within\:z-0:focus-within {
     z-index: 0;
   }
@@ -158819,6 +159184,22 @@ select {
     z-index: auto;
   }
 
+  .xl\:focus-within\:-z-10:focus-within {
+    z-index: -10;
+  }
+
+  .xl\:focus-within\:-z-20:focus-within {
+    z-index: -20;
+  }
+
+  .xl\:focus-within\:-z-30:focus-within {
+    z-index: -30;
+  }
+
+  .xl\:focus-within\:-z-40:focus-within {
+    z-index: -40;
+  }
+
   .xl\:focus\:z-0:focus {
     z-index: 0;
   }
@@ -158845,6 +159226,22 @@ select {
 
   .xl\:focus\:z-auto:focus {
     z-index: auto;
+  }
+
+  .xl\:focus\:-z-10:focus {
+    z-index: -10;
+  }
+
+  .xl\:focus\:-z-20:focus {
+    z-index: -20;
+  }
+
+  .xl\:focus\:-z-30:focus {
+    z-index: -30;
+  }
+
+  .xl\:focus\:-z-40:focus {
+    z-index: -40;
   }
 
   .xl\:isolate {
@@ -168332,6 +168729,10 @@ select {
     background-image: linear-gradient(to top left, var(--tw-gradient-stops));
   }
 
+  .\32xl\:bg-ideaslogo {
+    background-image: url('/assets/img/icons/android-chrome-512x512.png');
+  }
+
   .\32xl\:from-transparent {
     --tw-gradient-from: transparent;
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 0, 0, 0));
@@ -175329,7 +175730,7 @@ select {
   }
 
   .\32xl\:font-sans {
-    font-family: Nunito, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: Lato, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
   .\32xl\:font-serif {
@@ -191281,6 +191682,22 @@ select {
     z-index: auto;
   }
 
+  .\32xl\:-z-10 {
+    z-index: -10;
+  }
+
+  .\32xl\:-z-20 {
+    z-index: -20;
+  }
+
+  .\32xl\:-z-30 {
+    z-index: -30;
+  }
+
+  .\32xl\:-z-40 {
+    z-index: -40;
+  }
+
   .\32xl\:focus-within\:z-0:focus-within {
     z-index: 0;
   }
@@ -191309,6 +191726,22 @@ select {
     z-index: auto;
   }
 
+  .\32xl\:focus-within\:-z-10:focus-within {
+    z-index: -10;
+  }
+
+  .\32xl\:focus-within\:-z-20:focus-within {
+    z-index: -20;
+  }
+
+  .\32xl\:focus-within\:-z-30:focus-within {
+    z-index: -30;
+  }
+
+  .\32xl\:focus-within\:-z-40:focus-within {
+    z-index: -40;
+  }
+
   .\32xl\:focus\:z-0:focus {
     z-index: 0;
   }
@@ -191335,6 +191768,22 @@ select {
 
   .\32xl\:focus\:z-auto:focus {
     z-index: auto;
+  }
+
+  .\32xl\:focus\:-z-10:focus {
+    z-index: -10;
+  }
+
+  .\32xl\:focus\:-z-20:focus {
+    z-index: -20;
+  }
+
+  .\32xl\:focus\:-z-30:focus {
+    z-index: -30;
+  }
+
+  .\32xl\:focus\:-z-40:focus {
+    z-index: -40;
   }
 
   .\32xl\:isolate {
@@ -195823,4 +196272,3 @@ select {
     --tw-backdrop-sepia: sepia(100%);
   }
 }
-

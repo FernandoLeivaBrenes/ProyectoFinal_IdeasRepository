@@ -35,8 +35,8 @@ RUN apt-get update && apt-get install -y \
 # Add and install composer via php here
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-# Add node
-RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
+# Add nodejs LTS
+RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
 
 # and install it via shell
 RUN apt-get install -y nodejs
