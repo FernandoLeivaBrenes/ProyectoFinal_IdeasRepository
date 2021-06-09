@@ -9,6 +9,7 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Jetstream\HasTeams;
+use Laravel\Jetstream\Jetstream;
 use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
@@ -58,4 +59,46 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    /**
+     * Check user if belongs to a team by id.
+     * @param string $teamId 
+     * @return bool
+     */
+    public function belongsToTeamById(string $teamId): bool
+    {
+        $team = Team::all()->firstWhere('id', $teamId);
+        return $this->belongsToTeam($team);
+    }
+
+    /**
+     * Determine if the user belongs to any team.
+     * 
+     * @return bool
+     */
+    public function hasTeams()
+    {
+        return $this->allTeams()->isNotEmpty();
+    }
+
+    /**
+     * Get the current team of the user's context.
+     */
+    public function currentTeam()
+    {
+        if (is_null($this->current_team_id) && $this->id) {
+            $this->switchTeam($this->allTeams()->first());
+        }
+        return $this->belongsTo(Jetstream::teamModel(), 'current_team_id');
+    }
+
+    /**
+     * Determine if the given user is in the admin team referee in .env "ROOT USER Email"
+     * 
+     * @return bool
+     */
+    public function isAdminTeams()
+    {
+        return $this->belongsToTeam(Team::firstWhere('name', env('APP_ADMIN_TEAM_NAME', "ideasRepositoryAdministrator's Team")));
+    }
 }

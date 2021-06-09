@@ -22,10 +22,15 @@ class TeamFactory extends Factory
      */
     public function definition()
     {
+        $userCollection = User::all()->whereNotIn('email', [env('APP_ADMIN_EMAIL', 'ideasRepositoryAdministrator@ideasrepository.es')]);
         return [
-            'name' => $this->faker->unique()->company,
-            'user_id' => User::factory(),
-            'personal_team' => true,
+            'id'            => $this->faker->unique()->uuid,
+            'user_id'       => $userCollection->random()->id,
+            'name'          => function (array $attributes): string
+                            {
+                                return User::find($attributes['user_id'])->name . '\'s team Apart';
+                            },
+            'personal_team' => false,
         ];
     }
 }

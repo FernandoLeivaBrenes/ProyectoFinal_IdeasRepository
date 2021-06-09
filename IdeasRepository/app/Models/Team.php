@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Traits\Uuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Laravel\Jetstream\Events\TeamCreated;
 use Laravel\Jetstream\Events\TeamDeleted;
@@ -10,6 +11,7 @@ use Laravel\Jetstream\Team as JetstreamTeam;
 
 class Team extends JetstreamTeam
 {
+    use Uuids;
     use HasFactory;
 
     /**
@@ -27,6 +29,7 @@ class Team extends JetstreamTeam
      * @var array
      */
     protected $fillable = [
+        'id',
         'name',
         'personal_team',
     ];
@@ -41,4 +44,8 @@ class Team extends JetstreamTeam
         'updated' => TeamUpdated::class,
         'deleted' => TeamDeleted::class,
     ];
+
+    public function giveID(){
+        return $this->id;
+    }
 }

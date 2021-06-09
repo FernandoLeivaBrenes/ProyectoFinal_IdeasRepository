@@ -22,26 +22,20 @@
                     <a href="{{ url('/dashboard') }}" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase">{{ __('Dashboard') }}</a>
                 @else
                     <a href="{{ route('login') }}">
-                        <x-jet-button class="no-underline text-sm font-normal text-gray-50 hover:text-gray-700 uppercase bg-green-400 hover:bg-green-200" type="button">
-                            {{ __('Login') }}
+                        <x-jet-button class="no-underline text-sm font-normal text-teal-100 uppercase transition-colors duration-100 ease-linear" type="button">
+                            {{ __('Sign in') }}
                         </x-jet-button>
                     </a>
-                    {{-- <a href="{{ route('login') }}" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase">{{ __('Login') }}</a> --}}
                     @if (Route::has('register'))
-                        {{-- <a href="{{ route('register') }}" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase">{{ __('Register') }}</a> --}}
-                        <a href="{{ route('register') }}">
-                            <x-jet-button class="no-underline text-sm font-normal text-gray-50 hover:text-gray-700 uppercase bg-blue-500 hover:bg-blue-300" type="button">
-                                {{ __('Register') }}
-                            </x-jet-button>
-                        </a>
+                        <a href="{{ route('register') }}" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase">{{ __('Register') }}</a>
                     @endif
                 @endauth
             </div>
         @endif
 
         <div class="min-h-screen flex flex-col items-center justify-center -z-20">
-            <div class="flex flex-col justify-around h-screen relative bg-ideaslogo bg-contain bg-center bg-no-repeat mx-4">
-                <div class="{{ !strpos($_SERVER['HTTP_USER_AGENT'],'Firefox') ? 'glass-Effect ' : 'glass-AfterEffect' }} py-14 px-8 rounded-md shadow-md">
+            <div class="flex flex-col justify-around h-screen relative mx-4">
+                <div class="py-14 px-8">
                     <h1 class=" mb-0 md:mb-6 text-gray-700 text-center font-normal tracking-wider text-4xl sm:text-6xl">
                         {{ config('app.name') }}
                     </h1>

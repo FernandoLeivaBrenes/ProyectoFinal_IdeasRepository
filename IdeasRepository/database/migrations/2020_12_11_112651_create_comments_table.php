@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTeamsTable extends Migration
+class CreateCommentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,18 +13,24 @@ class CreateTeamsTable extends Migration
      */
     public function up()
     {
-        Schema::create('teams', function (Blueprint $table) {
-            $table->uuid('id')->primary();
+        Schema::create('comments', function (Blueprint $table) {
+            $table->id();
             
             $table->foreignId('user_id')
-                  ->index()
                   ->constrained()
                   ->onUpdate('cascade')
                   ->onDelete('cascade');
 
-            $table->string('name');
-            $table->boolean('personal_team');
+            $table->foreignId('project_id')
+                  ->constrained()
+                  ->onUpdate('cascade')
+                  ->onDelete('cascade');
+
+            $table->longText('content');
+
             $table->timestamps();
+
+            $table->softDeletes('deleted_at', $precision = 0);
         });
     }
 
@@ -35,6 +41,6 @@ class CreateTeamsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('teams');
+        Schema::dropIfExists('comments');
     }
 }

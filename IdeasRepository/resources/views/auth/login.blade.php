@@ -21,7 +21,14 @@
             </div>
 
             <div class="mt-4">
-                <x-jet-label for="password" value="{{ __('Password') }}" />
+                <div class="flex flex-row justify-between content-center">
+                    <x-jet-label for="password" class="inline" value="{{ __('Password') }}" />
+                    @if (Route::has('password.request'))
+                        <a class="underline text-sm text-blue-500 hover:text-blue-300" href="{{ route('password.request') }}">
+                            {{ __('Forgot your password?') }}
+                        </a>
+                    @endif
+                </div>
                 <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
             </div>
 
@@ -32,17 +39,22 @@
                 </label>
             </div>
 
-            <div class="flex items-center justify-end mt-4">
-                @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
-                    </a>
-                @endif
-
-                <x-jet-button class="ml-4">
+            <div class="flex items-center justify-center mt-6">
+                <x-jet-button class="w-full justify-center bg-green-500 hover:bg-green-400">
                     {{ __('Log in') }}
                 </x-jet-button>
             </div>
         </form>
+        
+        <x-slot name='link'>
+            @if (Route::has('register'))
+                <span class="text-sm text-gray-900">{{ __('New in IdeasRepository?') }} &nbsp;</span>
+
+                <a class="underline text-sm text-blue-500 hover:text-blue-300" href="{{ route('register') }}">
+                    {{ __('Create an account') }}
+                </a>
+            @endif
+        </x-slot>
+
     </x-jet-authentication-card>
 </x-guest-layout>
