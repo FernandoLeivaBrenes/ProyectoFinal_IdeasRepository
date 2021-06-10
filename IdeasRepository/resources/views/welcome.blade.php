@@ -14,8 +14,7 @@
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 </head>
 <body class="min-h-screen antialiased leading-none font-sans">
-    {{-- {{ dd($_SERVER) }} --}}
-    <div class="flex flex-col">
+    <div class="flex flex-col items-center">
         @if(Route::has('login'))
             <div class="absolute top-0 right-0 mt-5 mr-6 space-x-4 sm:mt-6 sm:mr-6 sm:space-x-6">
                 @auth
@@ -33,13 +32,24 @@
             </div>
         @endif
 
-        <div class="min-h-screen flex flex-col items-center justify-center -z-20">
-            <div class="flex flex-col justify-around h-screen relative mx-4">
-                <div class="py-14 px-8">
-                    <h1 class=" mb-0 md:mb-6 text-gray-700 text-center font-normal tracking-wider text-4xl sm:text-6xl">
+        <div class="min-h-screen flex flex-col items-center justify-center w-full sm:w-3/5">
+            <div class="relative flex flex-col justify-around h-screen">
+                <div class="px-5 sm:px-0">
+                    <h1 class=" mb-4 md:mb-9 text-gray-800 font-normal sm:font-light text-center tracking-wider text-5xl sm:text-6xl md:text-7xl">
                         {{ config('app.name') }}
                     </h1>
-                    <ul class="hidden md:flex flex-col space-y-2 sm:flex-row sm:flex-wrap sm:space-x-8 sm:space-y-0">
+                    <h3 class="text-center text-gray-600 tracking-wide leading-relaxed">
+                        {{ __('Include your project or idea here so that we can get to know it and in this way if you do not dare to develop it, someone can help you.') }}
+                        {{ __('Store ideas, create projects, alone or with colleagues ... This is your site.') }}
+                    </h3>
+                </div>
+            </div>
+            <div class="relative flex flex-col justify-around h-screen">
+                <div>
+                    <h1 class="mb-6 text-gray-600 text-center font-light tracking-wider text-4xl sm:mb-8 sm:text-6xl">
+                        {{ config('app.name', 'Laravel') }}
+                    </h1>
+                    {{-- <ul class="hidden md:flex flex-col space-y-2 sm:flex-row sm:flex-wrap sm:space-x-8 sm:space-y-0">
                         <li>
                             <a href="https://laravel.com/docs" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase" title="Laravel">Laravel</a>
                         </li>
@@ -61,40 +71,7 @@
                         <li>
                             <a href="https://tailwindcss.com" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase" title="Tailwind Css">Tailwind CSS</a>
                         </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="flex flex-col justify-around h-screen">
-                <div>
-                    <h1 class="mb-6 text-gray-600 text-center font-light tracking-wider text-4xl sm:mb-8 sm:text-6xl">
-                        {{ config('app.name', 'Laravel') }}
-                    </h1>
-                    <ul class="flex flex-col space-y-2 sm:flex-row sm:flex-wrap sm:space-x-8 sm:space-y-0">
-                        <li>
-                            <a href="https://laravel.com/docs" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase" title="Documentation">Documentation</a>
-                        </li>
-                        <li>
-                            <a href="https://laracasts.com" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase" title="Laracasts">Laracasts</a>
-                        </li>
-                        <li>
-                            <a href="https://laravel-news.com" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase" title="News">News</a>
-                        </li>
-                        <li>
-                            <a href="https://nova.laravel.com" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase" title="Nova">Nova</a>
-                        </li>
-                        <li>
-                            <a href="https://forge.laravel.com" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase" title="Forge">Forge</a>
-                        </li>
-                        <li>
-                            <a href="https://vapor.laravel.com" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase" title="Vapor">Vapor</a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/laravel/laravel" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase" title="GitHub">GitHub</a>
-                        </li>
-                        <li>
-                            <a href="https://tailwindcss.com" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase" title="Tailwind Css">Tailwind CSS</a>
-                        </li>
-                    </ul>
+                    </ul> --}}
                 </div>
             </div>
             <div class="flex flex-col justify-around h-screen">

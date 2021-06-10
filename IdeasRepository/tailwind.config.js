@@ -28,6 +28,7 @@ module.exports = {
     variants: {
         extend: {
             opacity: ['responsive', 'hover', 'focus', 'disabled'],
+            stroke:  ['hover', 'group-hover'],
         },
     },
 
