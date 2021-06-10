@@ -39,8 +39,10 @@
                         {{ config('app.name') }}
                     </h1>
                     <h3 class="text-center text-gray-600 tracking-wide leading-relaxed">
+                        {{ __('Store ideas, create projects, alone or with friends.') }}
                         {{ __('Include your project or idea here so that we can get to know it and in this way if you do not dare to develop it, someone can help you.') }}
-                        {{ __('Store ideas, create projects, alone or with colleagues ... This is your site.') }}
+                        <br>
+                        {{ __('This is your site.') }}
                     </h3>
                 </div>
             </div>
