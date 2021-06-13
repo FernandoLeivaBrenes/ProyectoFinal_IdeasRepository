@@ -1,0 +1,10 @@
+@layer components {
+    .button__container
+    {
+        @apply flex items-center justify-center;
+        @apply group;
+        @apply focus:outline-none;
+        @apply transition duration-75 ease-in-out;
+    }
+
+}

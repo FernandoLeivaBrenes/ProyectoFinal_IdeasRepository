@@ -16,7 +16,7 @@
 <body class="min-h-screen antialiased leading-none font-sans">
     <div class="flex flex-col items-center">
         @if(Route::has('login'))
-            <div class="absolute top-0 right-0 mt-5 mr-6 space-x-4 sm:mt-6 sm:mr-6 sm:space-x-6">
+            <div class="absolute top-0 right-0 mt-5 mr-6 space-x-4 sm:mt-6 sm:mr-6 sm:space-x-6 z-10">
                 @auth
                     <a href="{{ url('/dashboard') }}" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase">{{ __('Dashboard') }}</a>
                 @else
@@ -35,15 +35,15 @@
         <div class="min-h-screen flex flex-col items-center justify-center w-full sm:w-3/5">
             <div class="relative flex flex-col justify-around h-screen">
                 <div class="px-5 sm:px-0">
-                    <h1 class=" mb-4 md:mb-9 text-gray-800 font-normal sm:font-light text-center tracking-wider text-5xl sm:text-6xl md:text-7xl">
+                    <h1 class=" mb-5 md:mb-9 text-gray-800 font-normal sm:font-light text-center tracking-wider text-4xl sm:text-6xl md:text-7xl">
                         {{ config('app.name') }}
                     </h1>
-                    <h3 class="text-center text-gray-600 tracking-wide leading-relaxed">
+                    <h4 class="max-w-md md:max-w-2xl text-center text-gray-600 tracking-wide leading-relaxed">
                         {{ __('Store ideas, create projects, alone or with friends.') }}
                         {{ __('Include your project or idea here so that we can get to know it and in this way if you do not dare to develop it, someone can help you.') }}
                         <br>
-                        {{ __('This is your site.') }}
-                    </h3>
+                        <span class="hover:underline">{{ __('This is your site.') }}</span>
+                    </h4>
                 </div>
             </div>
             <div class="relative flex flex-col justify-around h-screen">

@@ -27,8 +27,10 @@ module.exports = {
 
     variants: {
         extend: {
+            backgroundColor: ['active'],
+            ringWidth:  ['hover', 'active'],
+            stroke:  ['hover', 'group-hover', 'group-focus'],
             opacity: ['responsive', 'hover', 'focus', 'disabled'],
-            stroke:  ['hover', 'group-hover'],
         },
     },
 

@@ -1,12 +1,15 @@
 @layer components {
-    .glass-Effect{
+    .glass-Effect
+    {
         @apply backdrop-filter backdrop-blur-md bg-opacity-10;
     }
-    .glass-AfterEffect{
+    .glass-AfterEffect
+    {
         @apply relative;
         @apply bg-transparent;
     }
-    .glass-AfterEffect::before{
+    .glass-AfterEffect::before
+    {
         content:"";
         @apply absolute;
         /* apply bg-gradient-to-br from-gray-200 via-white to-gray-300; */

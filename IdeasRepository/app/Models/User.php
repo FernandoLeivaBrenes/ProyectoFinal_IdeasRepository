@@ -67,7 +67,7 @@ class User extends Authenticatable
      */
     public function belongsToTeamById(string $teamId): bool
     {
-        $team = Team::all()->firstWhere('id', $teamId);
+        $team = Team::firstWhere('id', $teamId);
         return $this->belongsToTeam($team);
     }
 
@@ -97,7 +97,7 @@ class User extends Authenticatable
      * 
      * @return bool
      */
-    public function isAdminTeams()
+    public function isAtAdminTeams()
     {
         return $this->belongsToTeam(Team::firstWhere('name', env('APP_ADMIN_TEAM_NAME', "ideasRepositoryAdministrator's Team")));
     }

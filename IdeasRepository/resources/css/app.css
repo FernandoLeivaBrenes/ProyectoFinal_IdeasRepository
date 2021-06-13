@@ -1,5 +1,6 @@
 @import './custom-components/html-component.css';
 @import './custom-components/headings-component.css';
+@import './custom-components/iconButtons-component.css';
 @import './custom-components/glassy-component.css';
 
 @tailwind base;

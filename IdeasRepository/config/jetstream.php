@@ -43,7 +43,7 @@ return [
 
     'features' => [
         // Features::termsAndPrivacyPolicy(),
-        // Features::profilePhotos(),
+        Features::profilePhotos(),
         // Features::api(),
         Features::teams(['invitations' => false]), // True by default but it's not needed to create invitations.
         Features::accountDeletion(),

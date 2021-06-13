@@ -30,71 +30,22 @@ class Project extends Model
     ];
 
     /**
-     * Get the current owner of the project's context.
-     * 
-     * @return Project->user_id
-     */
-    public function owner(): int
-    {
-        return $this->belongsTo(Jetstream::userModel(), 'user_id')->id;
-    }
-
-    /**
-     * Get the current team which owns the project's context.
-     * 
-     * @return Project->team_id
-     */
-    public function teamOwner(): string
-    {
-        return $this->belongsTo(Jetstream::teamModel(), 'team_id')->id;
-    }
-
-    /**
-     * Get the reference of the main project of the project's context.
-     * 
-     * @return null|Project->id
-     */
-    public function projectReference(): ?int
-    {
-        return $this->hasRootProject() ? $this->belongsTo(Project::class, 'project_id')->id : null;
-    }
-
-    /**
-     * Get the reference of the main project of the project's context.
-     * 
-     * @return bool
-     */
-    public function hasRootProject(): bool
-    {
-        return (! $this->belongsTo(Project::class, 'project_id')) ? true : false;
-    }
-
-    /**
      * Get the last order of the project's context.
      * 
      * @return null|Project->order
      */
     public function getLastOrder()
     {
-        return $this->all()
+        return self::projects()
                     ->where('team_id', $this->team_id)
+                    ->where('project_id', $this->id)
                     ->sortByDesc('order')
                     ->first()
                     ->order;
     }
 
     /**
-     * Get the list of all projects.
-     * 
-     * @return null|Project->order
-     */
-    public static function projectById(int $id): Collection
-    {
-        return self::projects()->where('id', $id);
-    }
-
-    /**
-     * Get the list of all projects.
+     * Get the list of all projects which are not archived (deleteable).
      * 
      * @return null|Project->order
      */
