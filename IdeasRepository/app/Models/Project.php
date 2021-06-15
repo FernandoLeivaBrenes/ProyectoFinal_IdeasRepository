@@ -2,15 +2,17 @@
 
 namespace App\Models;
 
+use App\Traits\Uuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
-use Laravel\Jetstream\Jetstream as Jetstream;
+// use Laravel\Jetstream\Jetstream as Jetstream;
 
 class Project extends Model
 {
+    use Uuids;
     use HasFactory;
     use SoftDeletes;
 
@@ -20,6 +22,7 @@ class Project extends Model
      * @var array
      */
     protected $fillable = [
+        'id',
         'user_id',
         'team_id',
         'project_id',
@@ -36,12 +39,11 @@ class Project extends Model
      */
     public function getLastOrder()
     {
-        return self::projects()
+        return $this->notDeletedProjects()
                     ->where('team_id', $this->team_id)
-                    ->where('project_id', $this->id)
+                    ->where('project_id', $this->project_id)
                     ->sortByDesc('order')
-                    ->first()
-                    ->order;
+                    ->count();
     }
 
     /**
@@ -49,7 +51,7 @@ class Project extends Model
      * 
      * @return null|Project->order
      */
-    public static function projects(): Collection
+    public static function notDeletedProjects(): Collection
     {
         return DB::table('projects')
             ->join('users','projects.user_id','=','users.id')

@@ -10,11 +10,19 @@ module.exports = {
 
     theme: {
         extend: {
+            animation: {
+                'ping-once' : 'ping 100ms ease-in 1 normal backwards'
+            },
             backgroundImage: theme => ({
                 'ideaslogo': "url('/assets/img/icons/android-chrome-512x512.png')",
             }),
             fontFamily: {
                 sans: ['Lato', ...defaultTheme.fontFamily.sans],
+            },
+            minHeight:{
+                '70': '70%',
+                '80': '80%',
+                '90': '90%',
             },
             zIndex: {
                 '-10': '-10',

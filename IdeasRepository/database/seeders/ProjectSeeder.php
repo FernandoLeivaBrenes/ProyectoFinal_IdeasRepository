@@ -17,17 +17,21 @@ class ProjectSeeder extends Seeder
     {
         Project::factory(500)->create();
 
-        foreach (Project::all()->unique('team_id')->sortBy('team_id') as $projectCollection) {
-            $team = Project::all()->where('team_id', $projectCollection->team_id)->sortBy('team_id');
-            foreach ($team as $projectByTeam) {
-                if( $team->count() != 1 && $team->first() != $projectByTeam ) {                    
+        foreach (Project::all()->unique('team_id')->sortBy('team_id') as $projectUniqueCollection) {
+            // Collection of projects in the same Team
+            $projectsCollectionByTeamId = Project::all()->where('team_id', $projectUniqueCollection->team_id)->sortBy('team_id')->keyBy('id');
+            
+            foreach ($projectsCollectionByTeamId as $projectByTeam) {
+                $randomProject = $projectsCollectionByTeamId->random();
+                if ($randomProject->id != $projectByTeam->id) {
+                    $projectsCollectionByTeamId->pull($projectByTeam->id);
                     DB::table('projects')
-                    ->where('id', $projectByTeam->id)
-                    ->update([
-                        'project_id' => $projectCollection->id,
-                        'order'      => $projectByTeam->getLastOrder()+1,
-                        'access'     => $projectCollection->access,
-                    ]);
+                        ->where('id', $projectByTeam->id)
+                        ->update([
+                            'project_id' => $randomProject->id,
+                            'order'      => $randomProject->getLastOrder() >= 1 ? $randomProject->getLastOrder()+1 : $randomProject->getLastOrder(),
+                            'access'     => $randomProject->access,
+                        ]);
                 }
             }
         }

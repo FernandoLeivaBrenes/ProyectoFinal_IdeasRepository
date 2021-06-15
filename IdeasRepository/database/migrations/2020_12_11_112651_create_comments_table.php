@@ -21,8 +21,9 @@ class CreateCommentsTable extends Migration
                   ->onUpdate('cascade')
                   ->onDelete('cascade');
 
-            $table->foreignId('project_id')
+            $table->foreignUuid('project_id')
                   ->constrained()
+                  ->references('id')->on('projects')
                   ->onUpdate('cascade')
                   ->onDelete('cascade');
 

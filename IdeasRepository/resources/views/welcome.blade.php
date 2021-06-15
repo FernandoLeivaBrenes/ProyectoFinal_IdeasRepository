@@ -46,34 +46,12 @@
                     </h4>
                 </div>
             </div>
-            <div class="relative flex flex-col justify-around h-screen">
-                <div>
-                    <h1 class="mb-6 text-gray-600 text-center font-light tracking-wider text-4xl sm:mb-8 sm:text-6xl">
-                        {{ config('app.name', 'Laravel') }}
-                    </h1>
-                    {{-- <ul class="hidden md:flex flex-col space-y-2 sm:flex-row sm:flex-wrap sm:space-x-8 sm:space-y-0">
-                        <li>
-                            <a href="https://laravel.com/docs" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase" title="Laravel">Laravel</a>
-                        </li>
-                        <li>
-                            <a href="https://laracasts.com" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase" title="Laracasts">Laracasts</a>
-                        </li>
-                        <li>
-                            <a href="https://nova.laravel.com" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase" title="Nova">Nova</a>
-                        </li>
-                        <li>
-                            <a href="https://forge.laravel.com" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase" title="Forge">Forge</a>
-                        </li>
-                        <li>
-                            <a href="https://vapor.laravel.com" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase" title="Vapor">Vapor</a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/laravel/laravel" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase" title="GitHub">GitHub</a>
-                        </li>
-                        <li>
-                            <a href="https://tailwindcss.com" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase" title="Tailwind Css">Tailwind CSS</a>
-                        </li>
-                    </ul> --}}
+            <div class="relative flex flex-col justify-around h-screen bg-red-500">
+                <h1 class=" mb-0 md:mb-9 text-gray-800 font-normal sm:font-light text-center tracking-wider text-4xl sm:text-6xl md:text-7xl">
+                    {{ __('Some examples') }}
+                </h1>
+                <div class="min-h-80 bg-green-500">
+                    <x-carrousel.projects-carrousel/>
                 </div>
             </div>
             <div class="flex flex-col justify-around h-screen">

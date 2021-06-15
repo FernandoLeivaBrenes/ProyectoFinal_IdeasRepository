@@ -21,9 +21,10 @@ class CreateStoresTable extends Migration
                   ->onUpdate('cascade')
                   ->onDelete('cascade');
 
-            $table->foreignId('project_id')
+            $table->foreignUuid('project_id')
                   ->nullable()
                   ->constrained()
+                  ->references('id')->on('teams')
                   ->onUpdate('cascade')
                   ->onDelete('cascade');
 

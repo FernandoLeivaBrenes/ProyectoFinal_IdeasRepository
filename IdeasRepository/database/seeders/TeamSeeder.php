@@ -41,6 +41,6 @@ class TeamSeeder extends Seeder
             ]);
         };
 
-        Team::factory(20)->create();
+        Team::factory(15)->create();
     }
 }
