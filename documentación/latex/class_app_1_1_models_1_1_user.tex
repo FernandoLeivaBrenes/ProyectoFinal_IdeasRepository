@@ -1,0 +1,138 @@
+\hypertarget{class_app_1_1_models_1_1_user}{}\doxysection{User Class Reference}
+\label{class_app_1_1_models_1_1_user}\index{User@{User}}
+Inheritance diagram for User\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_app_1_1_models_1_1_user}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_models_1_1_user_aefdb5d7b3cda7d14909527602b237b3c}{belongs\+To\+Team\+By\+Id}} (string \$team\+Id)
+\item 
+\mbox{\hyperlink{class_app_1_1_models_1_1_user_acaf1228b467b46e5681448221afa9878}{has\+Teams}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_models_1_1_user_a553431e842acc67f973de3911ca6f3fa}{current\+Team}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_models_1_1_user_ae495f531a9ab7737daf07b8e3e1387f6}{is\+At\+Admin\+Team}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries \$fillable}
+\item 
+{\bfseries \$hidden}
+\item 
+{\bfseries \$casts}
+\item 
+{\bfseries \$appends}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_app_1_1_models_1_1_user_aefdb5d7b3cda7d14909527602b237b3c}\label{class_app_1_1_models_1_1_user_aefdb5d7b3cda7d14909527602b237b3c}} 
+\index{User@{User}!belongsToTeamById@{belongsToTeamById}}
+\index{belongsToTeamById@{belongsToTeamById}!User@{User}}
+\doxysubsubsection{\texorpdfstring{belongsToTeamById()}{belongsToTeamById()}}
+{\footnotesize\ttfamily belongs\+To\+Team\+By\+Id (\begin{DoxyParamCaption}\item[{string}]{\$team\+Id }\end{DoxyParamCaption})}
+
+Check user if belongs to a team by id. 
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$team\+Id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_app_1_1_models_1_1_user_a553431e842acc67f973de3911ca6f3fa}\label{class_app_1_1_models_1_1_user_a553431e842acc67f973de3911ca6f3fa}} 
+\index{User@{User}!currentTeam@{currentTeam}}
+\index{currentTeam@{currentTeam}!User@{User}}
+\doxysubsubsection{\texorpdfstring{currentTeam()}{currentTeam()}}
+{\footnotesize\ttfamily current\+Team (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the current team of the user\textquotesingle{}s context. \mbox{\Hypertarget{class_app_1_1_models_1_1_user_acaf1228b467b46e5681448221afa9878}\label{class_app_1_1_models_1_1_user_acaf1228b467b46e5681448221afa9878}} 
+\index{User@{User}!hasTeams@{hasTeams}}
+\index{hasTeams@{hasTeams}!User@{User}}
+\doxysubsubsection{\texorpdfstring{hasTeams()}{hasTeams()}}
+{\footnotesize\ttfamily has\+Teams (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Determine if the user belongs to any team.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_app_1_1_models_1_1_user_ae495f531a9ab7737daf07b8e3e1387f6}\label{class_app_1_1_models_1_1_user_ae495f531a9ab7737daf07b8e3e1387f6}} 
+\index{User@{User}!isAtAdminTeam@{isAtAdminTeam}}
+\index{isAtAdminTeam@{isAtAdminTeam}!User@{User}}
+\doxysubsubsection{\texorpdfstring{isAtAdminTeam()}{isAtAdminTeam()}}
+{\footnotesize\ttfamily is\+At\+Admin\+Team (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Determine if the given user is in the admin team referee in .env \char`\"{}\+R\+O\+O\+T U\+S\+E\+R Email\char`\"{}
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_app_1_1_models_1_1_user_a29ec873a375ecb374d2e2ec92490cd41}\label{class_app_1_1_models_1_1_user_a29ec873a375ecb374d2e2ec92490cd41}} 
+\index{User@{User}!\$appends@{\$appends}}
+\index{\$appends@{\$appends}!User@{User}}
+\doxysubsubsection{\texorpdfstring{\$appends}{$appends}}
+{\footnotesize\ttfamily \$appends\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= [}
+\DoxyCodeLine{        \textcolor{stringliteral}{'profile\_photo\_url'},}
+\DoxyCodeLine{    ]}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_app_1_1_models_1_1_user_a1649e00448c72a723c2c79fe5f915b97}\label{class_app_1_1_models_1_1_user_a1649e00448c72a723c2c79fe5f915b97}} 
+\index{User@{User}!\$casts@{\$casts}}
+\index{\$casts@{\$casts}!User@{User}}
+\doxysubsubsection{\texorpdfstring{\$casts}{$casts}}
+{\footnotesize\ttfamily \$casts\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= [}
+\DoxyCodeLine{        \textcolor{stringliteral}{'email\_verified\_at'} => \textcolor{stringliteral}{'datetime'},}
+\DoxyCodeLine{    ]}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_app_1_1_models_1_1_user_a6a90e74ccdf5efd70d51d10c906f8e32}\label{class_app_1_1_models_1_1_user_a6a90e74ccdf5efd70d51d10c906f8e32}} 
+\index{User@{User}!\$fillable@{\$fillable}}
+\index{\$fillable@{\$fillable}!User@{User}}
+\doxysubsubsection{\texorpdfstring{\$fillable}{$fillable}}
+{\footnotesize\ttfamily \$fillable\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= [}
+\DoxyCodeLine{        \textcolor{stringliteral}{'name'}, \textcolor{stringliteral}{'email'}, \textcolor{stringliteral}{'password'},}
+\DoxyCodeLine{    ]}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_app_1_1_models_1_1_user_a4a374564d2858d8ae869a8fb890aad56}\label{class_app_1_1_models_1_1_user_a4a374564d2858d8ae869a8fb890aad56}} 
+\index{User@{User}!\$hidden@{\$hidden}}
+\index{\$hidden@{\$hidden}!User@{User}}
+\doxysubsubsection{\texorpdfstring{\$hidden}{$hidden}}
+{\footnotesize\ttfamily \$hidden\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= [}
+\DoxyCodeLine{        \textcolor{stringliteral}{'password'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'remember\_token'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'two\_factor\_recovery\_codes'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'two\_factor\_secret'},}
+\DoxyCodeLine{    ]}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ideas\+Repository/app/\+Models/User.\+php\end{DoxyCompactItemize}
