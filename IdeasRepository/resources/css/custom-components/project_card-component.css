@@ -1,0 +1,8 @@
+@layer components {
+    .animation-pullDown
+    {
+        @apply transform;
+        @apply translate-y-9/10;
+        @apply origin-bottom;
+    }
+}

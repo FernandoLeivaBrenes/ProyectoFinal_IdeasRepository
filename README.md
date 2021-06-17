@@ -14,7 +14,7 @@
 
 El proyecto está alojado en un VPS (Servidor virtual privado) de [OVH](https://laravel.com/ "OVHcloud") y este está virtualizando una máquina [Ubuntu 20.04](https://ubuntu.com/ "Download Ubuntu").
 
-> [vps-94e6aac7.vps.ovh.net](http://vps-94e6aac7.vps.ovh.net/ "Ideas Repository")
+> [vps-ff5ddb79.vps.ovh.net](http://vps-ff5ddb79.vps.ovh.net/ "Ideas Repository")
 
 Proyecto desarrollado sobre contenedores [Docker :whale:](https://www.docker.com/ "Docker") y se ha usado [Laravel](https://laravel.com/ "Laravel") versión 8 como framework de trabajo. Para que pueda desplegarse en diferentes sistemas, se añaden una serie de instrucciones de uso.
 

@@ -58,6 +58,7 @@ class Project extends Model
             ->join('teams','projects.team_id','=','teams.id')
             ->select('projects.*','users.name as userName','users.email as userEmail','teams.name as teamName')
             ->whereNull('deleted_at')
-            ->get();
+            ->get()
+            ->sortByDesc('updated_at');
     }
 }

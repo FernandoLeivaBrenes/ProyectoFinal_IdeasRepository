@@ -12,6 +12,8 @@ use Laravel\Jetstream\HasTeams;
 use Laravel\Jetstream\Jetstream;
 use Laravel\Sanctum\HasApiTokens;
 
+use function PHPUnit\Framework\isNull;
+
 class User extends Authenticatable
 {
     use HasApiTokens;
@@ -97,8 +99,9 @@ class User extends Authenticatable
      * 
      * @return bool
      */
-    public function isAtAdminTeams()
+    public function isAtAdminTeam()
     {
-        return $this->belongsToTeam(Team::firstWhere('name', env('APP_ADMIN_TEAM_NAME', "ideasRepositoryAdministrator's Team")));
+
+        return !empty($this->allTeams()->firstWhere('name', env('APP_ADMIN_TEAM_NAME', "ideasRepositoryAdministrator's Team"))) ?? true ;
     }
 }

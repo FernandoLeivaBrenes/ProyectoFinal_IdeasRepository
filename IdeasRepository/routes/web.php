@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +21,13 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::prefix('admin')->middleware(['auth:sanctum', 'verified', 'team.admin'])->group(function () {
+    Route::get('/users', function () {
+        return view('user.admin_dashboard');
+    })->name('admin_dashboard');
+
+    Route::get('/users/{id?}', function ($id) {
+        return view('user.admin_dashboard', ['user_id'=> $id]);
+    })->name('admin_showUser');
+});

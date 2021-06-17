@@ -1,4 +1,5 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
+const colors = require('tailwindcss/colors');
 
 module.exports = {
     purge: [
@@ -11,11 +12,16 @@ module.exports = {
     theme: {
         extend: {
             animation: {
-                'ping-once' : 'ping 100ms ease-in 1 normal backwards'
+                'ping-once' : 'ping 100ms ease-in 1 normal backwards',
             },
             backgroundImage: theme => ({
                 'ideaslogo': "url('/assets/img/icons/android-chrome-512x512.png')",
             }),
+            colors: {
+                'public' : colors.green,
+                'protected' : colors.yellow,
+                'private' : colors.red,
+            },
             fontFamily: {
                 sans: ['Lato', ...defaultTheme.fontFamily.sans],
             },
@@ -23,6 +29,9 @@ module.exports = {
                 '70': '70%',
                 '80': '80%',
                 '90': '90%',
+            },
+            translate: {
+                '9/10' : '90%',
             },
             zIndex: {
                 '-10': '-10',
@@ -35,7 +44,10 @@ module.exports = {
 
     variants: {
         extend: {
+            animation: ['hover'],
             backgroundColor: ['active'],
+            // borderWidth: ['hover'],
+            margin: ['hover'],
             ringWidth:  ['hover', 'active'],
             stroke:  ['hover', 'group-hover', 'group-focus'],
             opacity: ['responsive', 'hover', 'focus', 'disabled'],

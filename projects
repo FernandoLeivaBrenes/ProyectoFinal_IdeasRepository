@@ -1,0 +1,64 @@
+        <div  
+            {{-- :class="{'animation-pullDown' : !openUserInfo }" --}}
+            :class="{'hidden' : !openUserInfo }"
+            class="hidden relative flex-col h-full max-w-lg mx-auto rounded-lg bg-gray-100 shadow-lg | border-t border-l-2 border-b-2 border-r-2 border-solid border-gray-500 hover:border-{{ $project['access'] }}-500">
+            <div class="flex justify-between -mt-4 px-4">
+                {{-- Access --}}
+                <span class="inline-block px-3 pt-0.5 ring-4 bg-{{ $project['access'] }}-500 ring-gray-200 rounded-full text-sm font-normal tracking-wide text-gray-700">
+                    {{ ucfirst($project['access']) }}
+                </span>
+                {{-- Project Last Update --}}
+                <span class="flex h-min py-1 px-2 items-center space-x-2 rounded-full text-gray-800 bg-gray-200 text-xs font-medium ">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <p class="text-blue-500 font-semibold text-xs pr-1">
+                        {{ $project['datesDiff'] }}
+                    </p>
+                </span>
+            </div>
+            <div class="py-2 px-6">
+                {{-- Project Title --}}
+                <h1 class="text-xl font-medium leading-6 tracking-wide text-gray-800 hover:text-blue-500 cursor-pointer">
+                    <a href="login">{{ $project['title'] }}</a>
+                </h1>
+            </div>
+            <div class="px-4 space-y-2">
+                {{-- Project Content --}}
+                <p class="text-gray-700 font-normal leading-5 tracking-wide">
+                    {{ $project['content'] }}
+                </p>
+                <router-link to="login" class="font-bold text-gray-700 hover:text-blue-400" >read more...</router-link>
+            </div>
+            <div class="flex flex-row items-end h-full w-full px-4 mt-4">
+                <div class="flex border-t border-gray-700 w-full py-4">
+                    <div class="flex items-center space-x-2 border-r border-gray-700 w-full">
+                        {{-- Project User Profile Photo --}}
+                        {{-- <img class="object-cover w-12 h-12 border border-gray-900 rounded-full"
+                        src="{{ $project['userProfileImage'] }}"
+                        alt="profile users"
+                        loading="lazy"/> --}}
+    
+                        <div class="ml-4">
+                            <p class="text-sm font-semibold tracking-wide text-gray-800">
+                                {{ $project['userName'] }}
+                            </p>
+                            <p class="text-sm font-semibold text-gray-600">
+                                ({{ $project['teamName'] }})
+                            </p>
+                            <p class="text-xs font-normal tracking-wider text-gray-700">
+                                {{ $project['created'] }}
+                            </p>
+                        </div>
+                    </div>
+                <div class="flex items-center flex-shrink-0 px-2">
+                    <div class="flex items-center space-x-1 text-gray-800">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                            </svg>
+                        <p class="font-medium">Pop</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>

@@ -7,7 +7,7 @@ use Illuminate\View\Component;
 
 class ProjectsCarrousel extends Component
 {
-    // public $projectCollection;
+    public $projectCollection;
 
     /**
      * Create a new component instance.
@@ -16,7 +16,7 @@ class ProjectsCarrousel extends Component
      */
     public function __construct()
     {
-        // $this->projectCollection = ProjectController::publicCollection_5();
+        $this->projectCollection = ProjectController::publicCollection_5();
     }
 
     /**
@@ -26,6 +26,6 @@ class ProjectsCarrousel extends Component
      */
     public function render()
     {
-        return view('components.carrousel.projects-carrousel', ['projectCollection' => ProjectController::publicCollection_5()]);
+        return view('components.carrousel.projects-carrousel', ['projectCollection' => $this->projectCollection]);
     }
 }

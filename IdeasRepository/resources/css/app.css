@@ -1,44 +1,9 @@
 @import './custom-components/html-component.css';
 @import './custom-components/headings-component.css';
 @import './custom-components/iconButtons-component.css';
+@import './custom-components/project_card-component.css';
 @import './custom-components/glassy-component.css';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@layer base {
-    legend
-    {
-        /* top: -18px; */
-    }
-    .bg-public
-    {
-        @apply bg-green-400;
-    }
-    .border-public
-    {
-        @apply border-green-400;
-    }
-    .bg-protected
-    {
-        @apply bg-yellow-300;
-    }
-    .border-protected
-    {
-        @apply border-yellow-300;
-    }
-    .bg-private
-    {
-        @apply bg-red-500;
-    }
-    .border-private
-    {
-        @apply border-red-500;
-    }
-    .right_top
-    {
-        top: -1.5em;
-        right: -1.5em;
-    }
-}
