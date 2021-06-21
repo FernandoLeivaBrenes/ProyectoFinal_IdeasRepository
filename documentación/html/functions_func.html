@@ -20,7 +20,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="favicon.ico"/></td>
+  <td id="projectlogo"><img alt="Logo" src="android-chrome-512x512.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">IdeasRepository
    </div>
@@ -80,6 +80,10 @@ $(function() {
 <li>addTeamMember()
 : <a class="el" href="class_app_1_1_policies_1_1_team_policy.html#aa89105ccbecd1a939678c762c2494959">TeamPolicy</a>
 </li>
+<li>allProjects()
+: <a class="el" href="class_app_1_1_models_1_1_project.html#aa6f6bd4cbf71384f2bfa8805d16afcdc">Project</a>
+, <a class="el" href="class_app_1_1_models_1_1_user.html#aa6f6bd4cbf71384f2bfa8805d16afcdc">User</a>
+</li>
 <li>authenticatedList()
 : <a class="el" href="class_app_1_1_http_1_1_controllers_1_1_project_controller.html#ac652f2fde677b2b0082aba8b30ab687c">ProjectController</a>
 </li>
@@ -106,6 +110,9 @@ $(function() {
 
 
 <h3><a id="index_c"></a>- c -</h3><ul>
+<li>closeModal()
+: <a class="el" href="class_app_1_1_http_1_1_livewire_1_1_users_panel.html#ab2f3007a9c6f3a19efb4e0aa48a89c14">UsersPanel</a>
+</li>
 <li>commands()
 : <a class="el" href="class_app_1_1_console_1_1_kernel.html#af0afefa0d79d09344a638cf6c532aa39">Kernel</a>
 </li>
@@ -114,6 +121,9 @@ $(function() {
 </li>
 <li>configureRateLimiting()
 : <a class="el" href="class_app_1_1_providers_1_1_route_service_provider.html#a51a0b4b24e8a1931e93c0a857eecb7a6">RouteServiceProvider</a>
+</li>
+<li>countTeams()
+: <a class="el" href="class_app_1_1_models_1_1_user.html#a7b2c7642c60de0e978304ce020aeb649">User</a>
 </li>
 <li>create()
 : <a class="el" href="class_app_1_1_actions_1_1_fortify_1_1_create_new_user.html#a7daf1022147e7e2fba09b4a2bd0bb004">CreateNewUser</a>
@@ -138,10 +148,14 @@ $(function() {
 <li>delete()
 : <a class="el" href="class_app_1_1_actions_1_1_jetstream_1_1_delete_team.html#a0de6efaa3c42555cee82e8d8321a70e3">DeleteTeam</a>
 , <a class="el" href="class_app_1_1_actions_1_1_jetstream_1_1_delete_user.html#a521f86518c9d9df3dcdb86cba7068002">DeleteUser</a>
+, <a class="el" href="class_app_1_1_http_1_1_livewire_1_1_users_panel.html#aab788f559c9ebb763f9abd0d969face2">UsersPanel</a>
 , <a class="el" href="class_app_1_1_policies_1_1_team_policy.html#a9a91202342bcdb7808d5b3ceded34ea0">TeamPolicy</a>
 </li>
 <li>deleteTeams()
 : <a class="el" href="class_app_1_1_actions_1_1_jetstream_1_1_delete_user.html#a8b6d207cc3778371deddb5572d32aaa0">DeleteUser</a>
+</li>
+<li>deleteUser()
+: <a class="el" href="class_app_1_1_http_1_1_livewire_1_1_users_panel.html#a7bc7bfa5384d57b7bfd159a47f730466">UsersPanel</a>
 </li>
 <li>destroy()
 : <a class="el" href="class_app_1_1_http_1_1_controllers_1_1_project_controller.html#a455f0c36be6aec27f1077a4db87f612d">ProjectController</a>
@@ -165,6 +179,9 @@ $(function() {
 
 
 <h3><a id="index_e"></a>- e -</h3><ul>
+<li>edit()
+: <a class="el" href="class_app_1_1_http_1_1_controllers_1_1_user_controller.html#a51cdc624a76cd9d446b40084397ae2e8">UserController</a>
+</li>
 <li>ensureUserDoesNotOwnTeam()
 : <a class="el" href="class_app_1_1_actions_1_1_jetstream_1_1_remove_team_member.html#add9bed98b86111f05e4d6654a5eb611b">RemoveTeamMember</a>
 </li>
@@ -181,6 +198,9 @@ $(function() {
 </li>
 <li>getOneProject()
 : <a class="el" href="class_app_1_1_http_1_1_livewire_1_1_projects_protected.html#a4830a801430d3f9d9c3ccc1a7735e83d">ProjectsProtected</a>
+</li>
+<li>getUser()
+: <a class="el" href="class_app_1_1_http_1_1_controllers_1_1_user_controller.html#a66c75dbdef6b19f742ff7265af5c4c59">UserController</a>
 </li>
 </ul>
 
@@ -220,6 +240,13 @@ $(function() {
 </ul>
 
 
+<h3><a id="index_m"></a>- m -</h3><ul>
+<li>mount()
+: <a class="el" href="class_app_1_1_http_1_1_livewire_1_1_projectcard_project.html#aa832fb3a11c0d6a107086e91a9db1754">ProjectcardProject</a>
+</li>
+</ul>
+
+
 <h3><a id="index_n"></a>- n -</h3><ul>
 <li>notDeletedProjects()
 : <a class="el" href="class_app_1_1_models_1_1_project.html#ac246a933659573235a1a4c6b10288e27">Project</a>
@@ -227,9 +254,16 @@ $(function() {
 </ul>
 
 
+<h3><a id="index_o"></a>- o -</h3><ul>
+<li>openModal()
+: <a class="el" href="class_app_1_1_http_1_1_livewire_1_1_users_panel.html#a1aeef177455bd50206b2c60df56dbbaa">UsersPanel</a>
+</li>
+</ul>
+
+
 <h3><a id="index_p"></a>- p -</h3><ul>
-<li>publicCollection_5()
-: <a class="el" href="class_app_1_1_http_1_1_controllers_1_1_project_controller.html#a0456926b0cd1b5748134e24a0f5edd37">ProjectController</a>
+<li>publicCollection_6()
+: <a class="el" href="class_app_1_1_http_1_1_controllers_1_1_project_controller.html#acec17fcaf5dce36bb4b56e54ee664076">ProjectController</a>
 </li>
 </ul>
 
@@ -244,6 +278,9 @@ $(function() {
 , <a class="el" href="class_app_1_1_providers_1_1_fortify_service_provider.html#acc294a6cc8e69743746820e3d15e3f78">FortifyServiceProvider</a>
 , <a class="el" href="class_app_1_1_providers_1_1_jetstream_service_provider.html#acc294a6cc8e69743746820e3d15e3f78">JetstreamServiceProvider</a>
 </li>
+<li>reinitilizeModal()
+: <a class="el" href="class_app_1_1_http_1_1_livewire_1_1_users_panel.html#adb36d04eba950b3ca6976bf27ec82a53">UsersPanel</a>
+</li>
 <li>remove()
 : <a class="el" href="class_app_1_1_actions_1_1_jetstream_1_1_remove_team_member.html#a1d2d5bb232cf9e4bcc2cf525dbb10ab4">RemoveTeamMember</a>
 </li>
@@ -251,7 +288,10 @@ $(function() {
 : <a class="el" href="class_app_1_1_policies_1_1_team_policy.html#a624ca96e18ddb96cde672f4dac77e351">TeamPolicy</a>
 </li>
 <li>render()
-: <a class="el" href="class_app_1_1_view_1_1_components_1_1_app_layout.html#afde88292c44dc59faf017738dae6dffb">AppLayout</a>
+: <a class="el" href="class_app_1_1_http_1_1_livewire_1_1_projectcard_project.html#afde88292c44dc59faf017738dae6dffb">ProjectcardProject</a>
+, <a class="el" href="class_app_1_1_http_1_1_livewire_1_1_projects_protected.html#afde88292c44dc59faf017738dae6dffb">ProjectsProtected</a>
+, <a class="el" href="class_app_1_1_http_1_1_livewire_1_1_users_panel.html#afde88292c44dc59faf017738dae6dffb">UsersPanel</a>
+, <a class="el" href="class_app_1_1_view_1_1_components_1_1_app_layout.html#afde88292c44dc59faf017738dae6dffb">AppLayout</a>
 , <a class="el" href="class_app_1_1_view_1_1_components_1_1_authentication_card_link.html#afde88292c44dc59faf017738dae6dffb">AuthenticationCardLink</a>
 , <a class="el" href="class_app_1_1_view_1_1_components_1_1_carrousel_1_1_projects_carrousel.html#afde88292c44dc59faf017738dae6dffb">ProjectsCarrousel</a>
 , <a class="el" href="class_app_1_1_view_1_1_components_1_1_guest_layout.html#afde88292c44dc59faf017738dae6dffb">GuestLayout</a>
@@ -279,9 +319,11 @@ $(function() {
 </li>
 <li>show()
 : <a class="el" href="class_app_1_1_http_1_1_controllers_1_1_project_controller.html#a04921ee0ef9350b90f969d33988827b3">ProjectController</a>
+, <a class="el" href="class_app_1_1_http_1_1_livewire_1_1_users_panel.html#a2b6f7ed35d47fe790d5d69c03379da78">UsersPanel</a>
 </li>
 <li>store()
 : <a class="el" href="class_app_1_1_http_1_1_controllers_1_1_project_controller.html#a9ef485163104597c12185b53cdacf638">ProjectController</a>
+, <a class="el" href="class_app_1_1_http_1_1_controllers_1_1_user_controller.html#a9ef485163104597c12185b53cdacf638">UserController</a>
 </li>
 </ul>
 
@@ -290,8 +332,131 @@ $(function() {
 <li>team()
 : <a class="el" href="class_app_1_1_models_1_1_team_invitation.html#a562a77dbdcab3dd4b357c811886f1917">TeamInvitation</a>
 </li>
+<li>test_api_token_permissions_can_be_updated()
+: <a class="el" href="class_tests_1_1_feature_1_1_api_token_permissions_test.html#a3320f7cfdd702b0945a79a98e8811b6d">ApiTokenPermissionsTest</a>
+</li>
+<li>test_api_tokens_can_be_created()
+: <a class="el" href="class_tests_1_1_feature_1_1_create_api_token_test.html#a34f8fb2e0609b6ca7e8ed66353106c66">CreateApiTokenTest</a>
+</li>
+<li>test_api_tokens_can_be_deleted()
+: <a class="el" href="class_tests_1_1_feature_1_1_delete_api_token_test.html#a0b630cd137a698e7e4785f2730cdd900">DeleteApiTokenTest</a>
+</li>
+<li>test_confirm_password_screen_can_be_rendered()
+: <a class="el" href="class_tests_1_1_feature_1_1_password_confirmation_test.html#a4d93e7a5bb680a3197d592eec7de136f">PasswordConfirmationTest</a>
+</li>
+<li>test_correct_password_must_be_provided_before_account_can_be_deleted()
+: <a class="el" href="class_tests_1_1_feature_1_1_delete_account_test.html#a4befb13769a484c9511d6fd1c795a705">DeleteAccountTest</a>
+</li>
+<li>test_current_password_must_be_correct()
+: <a class="el" href="class_tests_1_1_feature_1_1_update_password_test.html#a2dfb58a37785518ba427814f5313229a">UpdatePasswordTest</a>
+</li>
+<li>test_current_profile_information_is_available()
+: <a class="el" href="class_tests_1_1_feature_1_1_profile_information_test.html#a2082bbb2df9a1f00546dba29398bafd9">ProfileInformationTest</a>
+</li>
+<li>test_email_can_be_verified()
+: <a class="el" href="class_tests_1_1_feature_1_1_email_verification_test.html#ae4463aec8b0627570b0817a98cfd8869">EmailVerificationTest</a>
+</li>
+<li>test_email_can_not_verified_with_invalid_hash()
+: <a class="el" href="class_tests_1_1_feature_1_1_email_verification_test.html#a7968b063bbb55b6b71da323e5ea67345">EmailVerificationTest</a>
+</li>
+<li>test_email_verification_screen_can_be_rendered()
+: <a class="el" href="class_tests_1_1_feature_1_1_email_verification_test.html#ae87b7d90a936c51bb872e4e9edccd992">EmailVerificationTest</a>
+</li>
 <li>test_example()
 : <a class="el" href="class_tests_1_1_feature_1_1_example_test.html#af81cad7c29fc5c13350b15c14f0d3fb9">ExampleTest</a>
+</li>
+<li>test_login_screen_can_be_rendered()
+: <a class="el" href="class_tests_1_1_feature_1_1_authentication_test.html#a3142211d3733a28988861c14deb2872d">AuthenticationTest</a>
+</li>
+<li>test_new_passwords_must_match()
+: <a class="el" href="class_tests_1_1_feature_1_1_update_password_test.html#ac7f49a2b5262860f82f067a3545f6e57">UpdatePasswordTest</a>
+</li>
+<li>test_new_users_can_register()
+: <a class="el" href="class_tests_1_1_feature_1_1_registration_test.html#a2b168551dfbe9c6c18d7ec30bb357b06">RegistrationTest</a>
+</li>
+<li>test_only_team_owner_can_remove_team_members()
+: <a class="el" href="class_tests_1_1_feature_1_1_remove_team_member_test.html#ab92e20338f7becf31033b5b87e9576ca">RemoveTeamMemberTest</a>
+</li>
+<li>test_only_team_owner_can_update_team_member_roles()
+: <a class="el" href="class_tests_1_1_feature_1_1_update_team_member_role_test.html#a6984234f37b44dce8742a566dc29848d">UpdateTeamMemberRoleTest</a>
+</li>
+<li>test_other_browser_sessions_can_be_logged_out()
+: <a class="el" href="class_tests_1_1_feature_1_1_browser_sessions_test.html#a1c41d6aa7bb84e0388f01a4aab24b388">BrowserSessionsTest</a>
+</li>
+<li>test_password_can_be_confirmed()
+: <a class="el" href="class_tests_1_1_feature_1_1_password_confirmation_test.html#a0306eaadd5e9ef9d4a95a4983fb70fc9">PasswordConfirmationTest</a>
+</li>
+<li>test_password_can_be_reset_with_valid_token()
+: <a class="el" href="class_tests_1_1_feature_1_1_password_reset_test.html#a0e54485810ecfb3c613457fb7d5f4fe7">PasswordResetTest</a>
+</li>
+<li>test_password_can_be_updated()
+: <a class="el" href="class_tests_1_1_feature_1_1_update_password_test.html#ad32689bdbb4a5baf184399c1e63f351d">UpdatePasswordTest</a>
+</li>
+<li>test_password_is_not_confirmed_with_invalid_password()
+: <a class="el" href="class_tests_1_1_feature_1_1_password_confirmation_test.html#ae36d85937c4d1bc07a2b5438299156be">PasswordConfirmationTest</a>
+</li>
+<li>test_personal_teams_cant_be_deleted()
+: <a class="el" href="class_tests_1_1_feature_1_1_delete_team_test.html#aa8e6f34e5af08b21f200a68a00297108">DeleteTeamTest</a>
+</li>
+<li>test_profile_information_can_be_updated()
+: <a class="el" href="class_tests_1_1_feature_1_1_profile_information_test.html#a8e66915da5fb8b71497ff39a1804334d">ProfileInformationTest</a>
+</li>
+<li>test_recovery_codes_can_be_regenerated()
+: <a class="el" href="class_tests_1_1_feature_1_1_two_factor_authentication_settings_test.html#a1f86f6bbbc9d3b717adfc56c372a48e8">TwoFactorAuthenticationSettingsTest</a>
+</li>
+<li>test_registration_screen_can_be_rendered()
+: <a class="el" href="class_tests_1_1_feature_1_1_registration_test.html#a496a89a80ebaf44d9ba1c3b85be3a6f3">RegistrationTest</a>
+</li>
+<li>test_reset_password_link_can_be_requested()
+: <a class="el" href="class_tests_1_1_feature_1_1_password_reset_test.html#aed1f4d5963a35fcf32642c051b38d7b6">PasswordResetTest</a>
+</li>
+<li>test_reset_password_link_screen_can_be_rendered()
+: <a class="el" href="class_tests_1_1_feature_1_1_password_reset_test.html#aae25f25f88ec2893a55f91fd3596cc00">PasswordResetTest</a>
+</li>
+<li>test_reset_password_screen_can_be_rendered()
+: <a class="el" href="class_tests_1_1_feature_1_1_password_reset_test.html#af45335e1e558b72b52467df06b2942a6">PasswordResetTest</a>
+</li>
+<li>test_team_member_invitations_can_be_cancelled()
+: <a class="el" href="class_tests_1_1_feature_1_1_invite_team_member_test.html#a129849167f16d8bf96af027995e00aaf">InviteTeamMemberTest</a>
+</li>
+<li>test_team_member_roles_can_be_updated()
+: <a class="el" href="class_tests_1_1_feature_1_1_update_team_member_role_test.html#abc8ea5459232657bfc43288d385518ac">UpdateTeamMemberRoleTest</a>
+</li>
+<li>test_team_members_can_be_invited_to_team()
+: <a class="el" href="class_tests_1_1_feature_1_1_invite_team_member_test.html#ad7520b87707c99e13c73a9316e08c164">InviteTeamMemberTest</a>
+</li>
+<li>test_team_members_can_be_removed_from_teams()
+: <a class="el" href="class_tests_1_1_feature_1_1_remove_team_member_test.html#a02489513800e711da33a9ec1b8371311">RemoveTeamMemberTest</a>
+</li>
+<li>test_team_names_can_be_updated()
+: <a class="el" href="class_tests_1_1_feature_1_1_update_team_name_test.html#a8b328c25c1a79da49ee16529701327be">UpdateTeamNameTest</a>
+</li>
+<li>test_team_owners_cant_leave_their_own_team()
+: <a class="el" href="class_tests_1_1_feature_1_1_leave_team_test.html#ac47239023ceee1357a23582d91c8eb8c">LeaveTeamTest</a>
+</li>
+<li>test_teams_can_be_created()
+: <a class="el" href="class_tests_1_1_feature_1_1_create_team_test.html#a74adb065312fd0860ac45abe1a0d6d10">CreateTeamTest</a>
+</li>
+<li>test_teams_can_be_deleted()
+: <a class="el" href="class_tests_1_1_feature_1_1_delete_team_test.html#a5d9197ebc44e2597d66ab5fff8e49283">DeleteTeamTest</a>
+</li>
+<li>test_two_factor_authentication_can_be_disabled()
+: <a class="el" href="class_tests_1_1_feature_1_1_two_factor_authentication_settings_test.html#a821b3ad6edff6a6cb4f0bfcf4d6959fb">TwoFactorAuthenticationSettingsTest</a>
+</li>
+<li>test_two_factor_authentication_can_be_enabled()
+: <a class="el" href="class_tests_1_1_feature_1_1_two_factor_authentication_settings_test.html#abe963894a0d3aba343c744ed3a8b702b">TwoFactorAuthenticationSettingsTest</a>
+</li>
+<li>test_user_accounts_can_be_deleted()
+: <a class="el" href="class_tests_1_1_feature_1_1_delete_account_test.html#a598256f0aac1868df99abc6518d96995">DeleteAccountTest</a>
+</li>
+<li>test_users_can_authenticate_using_the_login_screen()
+: <a class="el" href="class_tests_1_1_feature_1_1_authentication_test.html#ab744d11200f483281cb5dd3e5d934ac4">AuthenticationTest</a>
+</li>
+<li>test_users_can_leave_teams()
+: <a class="el" href="class_tests_1_1_feature_1_1_leave_team_test.html#abe2c31afabbc5130b801b4d002a26d65">LeaveTeamTest</a>
+</li>
+<li>test_users_can_not_authenticate_with_invalid_password()
+: <a class="el" href="class_tests_1_1_feature_1_1_authentication_test.html#ad85847015e1d3282016c0ec19840c660">AuthenticationTest</a>
 </li>
 </ul>
 

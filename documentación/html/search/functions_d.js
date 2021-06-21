@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['schedule_269',['schedule',['../class_app_1_1_console_1_1_kernel.html#ac8f0af578c80277b7a25381c6a9e268c',1,'App::Console::Kernel']]],
-  ['show_270',['show',['../class_app_1_1_http_1_1_controllers_1_1_project_controller.html#a04921ee0ef9350b90f969d33988827b3',1,'App::Http::Controllers::ProjectController']]],
-  ['store_271',['store',['../class_app_1_1_http_1_1_controllers_1_1_project_controller.html#a9ef485163104597c12185b53cdacf638',1,'App::Http::Controllers::ProjectController']]]
+  ['publiccollection_5f6_782',['publicCollection_6',['../class_app_1_1_http_1_1_controllers_1_1_project_controller.html#acec17fcaf5dce36bb4b56e54ee664076',1,'App::Http::Controllers::ProjectController']]]
 ];

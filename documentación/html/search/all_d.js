@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['membership_74',['Membership',['../class_app_1_1_models_1_1_membership.html',1,'App::Models']]]
+  ['kernel_223',['Kernel',['../class_app_1_1_http_1_1_kernel.html',1,'Kernel'],['../class_app_1_1_console_1_1_kernel.html',1,'Kernel']]],
+  ['kernel_2ephp_224',['Kernel.php',['../_console_2_kernel_8php.html',1,'(Global Namespace)'],['../_http_2_kernel_8php.html',1,'(Global Namespace)']]]
 ];

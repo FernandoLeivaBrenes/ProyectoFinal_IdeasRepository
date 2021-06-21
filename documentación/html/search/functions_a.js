@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['notdeletedprojects_259',['notDeletedProjects',['../class_app_1_1_models_1_1_project.html#ac246a933659573235a1a4c6b10288e27',1,'App::Models::Project']]]
+  ['mount_779',['mount',['../class_app_1_1_http_1_1_livewire_1_1_projectcard_project.html#aa832fb3a11c0d6a107086e91a9db1754',1,'App::Http::Livewire::ProjectcardProject']]]
 ];

@@ -1,4 +1,20 @@
 var searchData=
 [
-  ['laravel_229',['Laravel',['../namespace_laravel.html',1,'']]]
+  ['actions_529',['Actions',['../namespace_app_1_1_actions.html',1,'App']]],
+  ['app_530',['App',['../namespace_app.html',1,'']]],
+  ['carrousel_531',['Carrousel',['../namespace_app_1_1_view_1_1_components_1_1_carrousel.html',1,'App::View::Components']]],
+  ['components_532',['Components',['../namespace_app_1_1_view_1_1_components.html',1,'App::View']]],
+  ['console_533',['Console',['../namespace_app_1_1_console.html',1,'App']]],
+  ['controllers_534',['Controllers',['../namespace_app_1_1_http_1_1_controllers.html',1,'App::Http']]],
+  ['exceptions_535',['Exceptions',['../namespace_app_1_1_exceptions.html',1,'App']]],
+  ['fortify_536',['Fortify',['../namespace_app_1_1_actions_1_1_fortify.html',1,'App::Actions']]],
+  ['http_537',['Http',['../namespace_app_1_1_http.html',1,'App']]],
+  ['jetstream_538',['Jetstream',['../namespace_app_1_1_actions_1_1_jetstream.html',1,'App::Actions']]],
+  ['livewire_539',['Livewire',['../namespace_app_1_1_http_1_1_livewire.html',1,'App::Http']]],
+  ['middleware_540',['Middleware',['../namespace_app_1_1_http_1_1_middleware.html',1,'App::Http']]],
+  ['models_541',['Models',['../namespace_app_1_1_models.html',1,'App']]],
+  ['policies_542',['Policies',['../namespace_app_1_1_policies.html',1,'App']]],
+  ['providers_543',['Providers',['../namespace_app_1_1_providers.html',1,'App']]],
+  ['traits_544',['Traits',['../namespace_app_1_1_traits.html',1,'App']]],
+  ['view_545',['View',['../namespace_app_1_1_view.html',1,'App']]]
 ];

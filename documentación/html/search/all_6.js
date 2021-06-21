@@ -1,4 +1,30 @@
 var searchData=
 [
-  ['fortifyserviceprovider_56',['FortifyServiceProvider',['../class_app_1_1_providers_1_1_fortify_service_provider.html',1,'App::Providers']]]
+  ['danger_2dbutton_2eblade_2ephp_150',['danger-button.blade.php',['../danger-button_8blade_8php.html',1,'']]],
+  ['database_151',['Database',['../namespace_database.html',1,'']]],
+  ['database_2ephp_152',['database.php',['../database_8php.html',1,'']]],
+  ['databaseseeder_153',['DatabaseSeeder',['../class_database_1_1_seeders_1_1_database_seeder.html',1,'Database::Seeders']]],
+  ['databaseseeder_2ephp_154',['DatabaseSeeder.php',['../_database_seeder_8php.html',1,'']]],
+  ['definition_155',['definition',['../class_database_1_1_factories_1_1_project_factory.html#a6c4fc01ab54e187fee93cb01cd5f9849',1,'Database\Factories\ProjectFactory\definition()'],['../class_database_1_1_factories_1_1_team_factory.html#a6c4fc01ab54e187fee93cb01cd5f9849',1,'Database\Factories\TeamFactory\definition()'],['../class_database_1_1_factories_1_1_user_factory.html#a6c4fc01ab54e187fee93cb01cd5f9849',1,'Database\Factories\UserFactory\definition()']]],
+  ['delete_156',['delete',['../class_app_1_1_actions_1_1_jetstream_1_1_delete_team.html#a0de6efaa3c42555cee82e8d8321a70e3',1,'App\Actions\Jetstream\DeleteTeam\delete()'],['../class_app_1_1_actions_1_1_jetstream_1_1_delete_user.html#a521f86518c9d9df3dcdb86cba7068002',1,'App\Actions\Jetstream\DeleteUser\delete()'],['../class_app_1_1_http_1_1_livewire_1_1_users_panel.html#aab788f559c9ebb763f9abd0d969face2',1,'App\Http\Livewire\UsersPanel\delete()'],['../class_app_1_1_policies_1_1_team_policy.html#a9a91202342bcdb7808d5b3ceded34ea0',1,'App\Policies\TeamPolicy\delete()']]],
+  ['delete_2dteam_2dform_2eblade_2ephp_157',['delete-team-form.blade.php',['../delete-team-form_8blade_8php.html',1,'']]],
+  ['delete_2duser_2dform_2eblade_2ephp_158',['delete-user-form.blade.php',['../delete-user-form_8blade_8php.html',1,'']]],
+  ['deleteaccounttest_159',['DeleteAccountTest',['../class_tests_1_1_feature_1_1_delete_account_test.html',1,'Tests::Feature']]],
+  ['deleteaccounttest_2ephp_160',['DeleteAccountTest.php',['../_delete_account_test_8php.html',1,'']]],
+  ['deleteapitokentest_161',['DeleteApiTokenTest',['../class_tests_1_1_feature_1_1_delete_api_token_test.html',1,'Tests::Feature']]],
+  ['deleteapitokentest_2ephp_162',['DeleteApiTokenTest.php',['../_delete_api_token_test_8php.html',1,'']]],
+  ['deleteteam_163',['DeleteTeam',['../class_app_1_1_actions_1_1_jetstream_1_1_delete_team.html',1,'App::Actions::Jetstream']]],
+  ['deleteteam_2ephp_164',['DeleteTeam.php',['../_delete_team_8php.html',1,'']]],
+  ['deleteteams_165',['deleteTeams',['../class_app_1_1_actions_1_1_jetstream_1_1_delete_user.html#a8b6d207cc3778371deddb5572d32aaa0',1,'App::Actions::Jetstream::DeleteUser']]],
+  ['deleteteamtest_166',['DeleteTeamTest',['../class_tests_1_1_feature_1_1_delete_team_test.html',1,'Tests::Feature']]],
+  ['deleteteamtest_2ephp_167',['DeleteTeamTest.php',['../_delete_team_test_8php.html',1,'']]],
+  ['deleteuser_168',['DeleteUser',['../class_app_1_1_actions_1_1_jetstream_1_1_delete_user.html',1,'DeleteUser'],['../class_app_1_1_http_1_1_livewire_1_1_users_panel.html#a7bc7bfa5384d57b7bfd159a47f730466',1,'App\Http\Livewire\UsersPanel\deleteUser()']]],
+  ['deleteuser_2ephp_169',['DeleteUser.php',['../_delete_user_8php.html',1,'']]],
+  ['destroy_170',['destroy',['../class_app_1_1_http_1_1_controllers_1_1_project_controller.html#a455f0c36be6aec27f1077a4db87f612d',1,'App::Http::Controllers::ProjectController']]],
+  ['dialog_2dmodal_2eblade_2ephp_171',['dialog-modal.blade.php',['../dialog-modal_8blade_8php.html',1,'']]],
+  ['down_172',['down',['../class_create_users_table.html#af5fda92f47a449c7a33f9dd5ef5aa6c3',1,'CreateUsersTable\down()'],['../class_create_password_resets_table.html#af5fda92f47a449c7a33f9dd5ef5aa6c3',1,'CreatePasswordResetsTable\down()'],['../class_add_two_factor_columns_to_users_table.html#af5fda92f47a449c7a33f9dd5ef5aa6c3',1,'AddTwoFactorColumnsToUsersTable\down()'],['../class_create_failed_jobs_table.html#af5fda92f47a449c7a33f9dd5ef5aa6c3',1,'CreateFailedJobsTable\down()'],['../class_create_personal_access_tokens_table.html#af5fda92f47a449c7a33f9dd5ef5aa6c3',1,'CreatePersonalAccessTokensTable\down()'],['../class_create_teams_table.html#af5fda92f47a449c7a33f9dd5ef5aa6c3',1,'CreateTeamsTable\down()'],['../class_create_team_user_table.html#af5fda92f47a449c7a33f9dd5ef5aa6c3',1,'CreateTeamUserTable\down()'],['../class_create_team_invitations_table.html#af5fda92f47a449c7a33f9dd5ef5aa6c3',1,'CreateTeamInvitationsTable\down()'],['../class_create_projects_table.html#af5fda92f47a449c7a33f9dd5ef5aa6c3',1,'CreateProjectsTable\down()'],['../class_create_comments_table.html#af5fda92f47a449c7a33f9dd5ef5aa6c3',1,'CreateCommentsTable\down()'],['../class_create_stores_table.html#af5fda92f47a449c7a33f9dd5ef5aa6c3',1,'CreateStoresTable\down()'],['../class_update_current_team_id_to_users_table.html#af5fda92f47a449c7a33f9dd5ef5aa6c3',1,'UpdateCurrentTeamIdToUsersTable\down()'],['../class_create_sessions_table.html#af5fda92f47a449c7a33f9dd5ef5aa6c3',1,'CreateSessionsTable\down()']]],
+  ['dropdown_2dlink_2eblade_2ephp_173',['dropdown-link.blade.php',['../dropdown-link_8blade_8php.html',1,'']]],
+  ['dropdown_2eblade_2ephp_174',['dropdown.blade.php',['../dropdown_8blade_8php.html',1,'']]],
+  ['factories_175',['Factories',['../namespace_database_1_1_factories.html',1,'Database']]],
+  ['seeders_176',['Seeders',['../namespace_database_1_1_seeders.html',1,'Database']]]
 ];
