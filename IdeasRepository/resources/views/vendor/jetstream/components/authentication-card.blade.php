@@ -11,7 +11,7 @@
         </h1>
     </div>
 
-    <div class="w-11/12 sm:max-w-sm mt-6 px-6 py-4 overflow-hidden sm:rounded-lg shadow-md bg-white border border-gray-300 border-solid">
+    <div class="w-full sm:w-11/12 sm:max-w-sm mt-6 px-6 py-4 overflow-hidden sm:rounded-lg shadow-md bg-white border border-gray-300 border-solid">
         {{ $slot }}
     </div>
     

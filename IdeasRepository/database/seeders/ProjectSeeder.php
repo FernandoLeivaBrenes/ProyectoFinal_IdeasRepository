@@ -15,7 +15,7 @@ class ProjectSeeder extends Seeder
      */
     public function run()
     {
-        Project::factory(500)->create();
+        Project::factory(600)->create();
 
         foreach (Project::all()->unique('team_id')->sortBy('team_id') as $projectUniqueCollection) {
             // Collection of projects in the same Team

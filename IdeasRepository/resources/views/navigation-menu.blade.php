@@ -11,18 +11,23 @@
                 </div>
 
                 <!-- Navigation Links -->
+                @if (Auth::user()->isAtAdminTeam())
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-jet-nav-link href="{{ route('admin_dashboard') }}" :active="request()->routeIs('admin_dashboard')">
+                            {{ __('Users') }}
+                        </x-jet-nav-link>
+                    </div>
+                @endif
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Projects') }}
                     </x-jet-nav-link>
                 </div>
-                @if (Auth::user()->isAtAdminTeam())
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('admin_dashboard') }}" :active="request()->routeIs('admin_dashboard')">
-                        {{ __('Users') }}
+                    <x-jet-nav-link href="{{ route('tutorial') }}" :active="request()->routeIs('tutorial')">
+                        {{ __('Tutorial') }}
                     </x-jet-nav-link>
                 </div>
-                @endif
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ml-6">
@@ -144,18 +149,23 @@
 
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
+        @if (Auth::user()->isAtAdminTeam())
+            <div class="pt-2 pb-3 space-y-1">
+                <x-jet-responsive-nav-link href="{{ route('admin_dashboard') }}" :active="request()->routeIs('admin_dashboard')">
+                    {{ __('Users') }}
+                </x-jet-responsive-nav-link>
+            </div>
+        @endif
         <div class="pt-2 pb-3 space-y-1">
             <x-jet-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                 {{ __('Projects') }}
             </x-jet-responsive-nav-link>
         </div>
-        @if (Auth::user()->isAtAdminTeam())
         <div class="pt-2 pb-3 space-y-1">
-            <x-jet-responsive-nav-link href="{{ route('admin_dashboard') }}" :active="request()->routeIs('admin_dashboard')">
-                {{ __('Users') }}
+            <x-jet-responsive-nav-link href="{{ route('tutorial') }}" :active="request()->routeIs('tutorial')">
+                {{ __('Tutorial') }}
             </x-jet-responsive-nav-link>
         </div>
-        @endif
 
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200">

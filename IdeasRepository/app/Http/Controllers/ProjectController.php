@@ -13,35 +13,36 @@ use function PHPUnit\Framework\isEmpty;
 class ProjectController extends Controller
 {
     /**
-     * Transform a large string into a little one (def 200 words).
+     * Transform a large string into a little one (def 50 words).
      *
+     * @param string inputString
+     * @param int words
      * @return String
      */
-    private static function firstWords( string $inputString ): String
+    private static function firstWords( string $inputString, int $words = 50 ): String
     {
-        $numWords = 200;
         // Array = [ key@wordStarts => value@wordItslef ]
         $wordPosition = str_word_count($inputString, 2);
-        $length = min($numWords, count($wordPosition));
+        $length = min($words, count($wordPosition));
         
         // Select position from array keys (the Key=>Value contains key@autoincrement=>value@wordCharacterStartPosition)
         $arrPositionKey = array_keys($wordPosition)[$length+4];
         
-        return substr($inputString, 0, $arrPositionKey).($length == $numWords ? ' ...': '');
+        return substr($inputString, 0, $arrPositionKey).($length == $words ? ' ...': '');
     }
 
     /**
-     * Display a listing of 5 random public projects.
+     * Display a listing of 6 random public projects.
      *
      * @return \Illuminate\Http\Response
      */
-    public static function publicCollection_5(): Response
+    public static function publicCollection_6(): Response
     {
         try {
             $projectCollection = Project::notDeletedProjects()
                         ->where('order', 1 )
                         ->where('access','public')
-                        ->random(5);        
+                        ->random(6);        
 
             foreach ($projectCollection as $item) {
                 $item->content = self::firstWords($item->content);
@@ -73,7 +74,7 @@ class ProjectController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public static function listByUser(User $user): Collection
+    public static function listByUser(User $user): Response
     {
         $projects = self::authenticatedList();
 
@@ -81,7 +82,11 @@ class ProjectController extends Controller
             self::projectsByUser($user,['private'])
         );
 
-        return $projects->sortBy('created_at');
+        foreach ($projects as $item) {
+            $item->content = self::firstWords($item->content, 100);
+        }
+
+        return response($projects->sortBy('created_at'), 200);
     }
 
     /**

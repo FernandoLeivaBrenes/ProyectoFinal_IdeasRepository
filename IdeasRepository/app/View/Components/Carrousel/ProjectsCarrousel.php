@@ -3,6 +3,8 @@
 namespace App\View\Components\Carrousel;
 
 use App\Http\Controllers\ProjectController;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Request;
 use Illuminate\View\Component;
 
 class ProjectsCarrousel extends Component
@@ -16,7 +18,11 @@ class ProjectsCarrousel extends Component
      */
     public function __construct()
     {
-        $this->projectCollection = ProjectController::publicCollection_5();
+        if (Request::route()->getName() != 'dashboard' ) {
+            $this->projectCollection = ProjectController::publicCollection_6();
+        }else{
+            $this->projectCollection = ProjectController::listByUser(Auth::user());    
+        }
     }
 
     /**

@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,16 +18,30 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::middleware(['auth:sanctum', 'verified'])->group(function () {
+    
+    Route::get('/tutorial', function (){
+        return view('welcome');
+    })->name('tutorial');
+
+    Route::get('/dashboard', function(){
+        return view('projects');
+    })->name('dashboard');
+});
 
 Route::prefix('admin')->middleware(['auth:sanctum', 'verified', 'team.admin'])->group(function () {
+
     Route::get('/users', function () {
         return view('user.admin_dashboard');
     })->name('admin_dashboard');
 
-    Route::get('/users/{id?}', function ($id) {
-        return view('user.admin_dashboard', ['user_id'=> $id]);
-    })->name('admin_showUser');
+    Route::get('/users/create', function () {
+        return view('user.CreateUser');
+    })->name('admin_createView');
+
+    Route::post('/users/create', [ UserController::class, 'store' ])->name('admin_create');
+
+    Route::get('/users/edit/{id}', [ UserController::class, 'getUser' ])->name('admin_EditUser');
+
+    Route::post('/users/edit', [ UserController::class, 'edit' ])->name('admin_edit');
 });

@@ -1,4 +1,4 @@
-<div x-data="{ openUserInfo: true, toggle() { this.openUserInfo = ! this.openUserInfo } }" class="relative flex justify-around flex-col items-center my-3 md:my-20 min-w-full min-h-full">
+<div x-data="{ openUserInfo: true, toggle() { this.openUserInfo = ! this.openUserInfo } }" class="relative flex justify-around flex-col items-center my-6 md:my-20">
     {{-- Down text content and shows user info --}}
     <div :class="{'animate-bounce' : !openUserInfo}" class="flex justify-center -mb-8 z-30 transform hover:translate-y-1">
         <img @click="toggle()" class="w-18 h-18 md:w-24 md:h-24 object-cover rounded-full | border border-gray-700 hover:border-{{ $project['access'] }}-500 shadow-md" src="{{ $project['userProfileImage'] }}" alt="profile users" loading="lazy">
@@ -50,12 +50,14 @@
                         <a href="login">{{ $project['title'] }}</a>
                     </h1>
                 </div>
-                <div class="px-4 space-y-5 mx-5 pb-6 text-justify">
+                <div class="px-4 mx-5 pb-6 text-justify">
                     {{-- Project Content --}}
-                    <p class="text-gray-700 font-normal leading-5 tracking-wide overflow-y-scroll sm:overflow-auto h-64 sm:h-24 md:h-full">
+                    <p class="text-gray-700 font-normal leading-5 tracking-wide h-44 sm:h-24 md:h-full">
                         {{ $project['content'] }}
                     </p>
-                    <a href="login" class="font-bold text-gray-700 hover:text-blue-400" >read more...</a>
+                    <p class="flex justify-end">
+                        <a href="login" class="font-bold text-gray-700 hover:text-blue-400" >read more...</a>
+                    </p>
                 </div>
         </div>
     </div>

@@ -3,7 +3,6 @@
 namespace App\Http\Livewire;
 
 use App\Http\Controllers\ProjectController;
-use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 use Livewire\WithPagination;
 
@@ -15,7 +14,7 @@ class ProjectsProtected extends Component
 
     public function render()
     {
-        return view('livewire.projects-protected')->with('projects', $this->getAllProjects());
+        return view('livewire.projects-protected');
     }
 
     /**
@@ -24,13 +23,6 @@ class ProjectsProtected extends Component
      */
     public function intoTrash($projectId){
         session()->flash('message', ProjectController::destroy($projectId));
-    }
-
-    /**
-     * Get all projects in the app and private projects.
-     */
-    private function getAllProjects(){
-        return ProjectController::listByUser(Auth::user());
     }
 
     /**

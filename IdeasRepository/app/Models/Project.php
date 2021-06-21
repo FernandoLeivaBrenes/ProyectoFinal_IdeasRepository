@@ -61,4 +61,15 @@ class Project extends Model
             ->get()
             ->sortByDesc('updated_at');
     }
+
+    /**
+     * Get all projects by user
+     * 
+     * @return int
+     */
+    public function allProjects()
+    {
+        return $this->notDeletedProjects()
+                ->where('user_id', $this->id);
+    }
 }

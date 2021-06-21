@@ -3,7 +3,7 @@
         @if(Route::has('login'))
             <div class="absolute top-0 right-0 mt-5 mr-6 space-x-4 sm:mt-6 sm:mr-6 sm:space-x-6 z-10">
                 @auth
-                    <a href="{{ url('/dashboard') }}" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase">{{ __('Dashboard') }}</a>
+                    <a href="{{ url('/dashboard') }}" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase">{{ __('Go back') }}</a>
                 @else
                     <a href="{{ route('login') }}">
                         <x-jet-button class="no-underline text-sm font-normal text-teal-100 uppercase transition-colors duration-100 ease-linear" type="button">
@@ -17,7 +17,7 @@
             </div>
         @endif
     
-        <div class="min-h-screen flex flex-col items-center justify-center w-full sm:w-3/5">
+        <div class="min-h-screen flex flex-col items-center justify-center w-full">
             <div class="relative flex flex-col justify-around h-screen">
                 <div class="px-5 sm:px-0">
                     <h1 class=" mb-5 md:mb-9 text-gray-800 font-normal sm:font-light text-center tracking-wider text-4xl sm:text-6xl md:text-7xl">
@@ -31,15 +31,13 @@
                     </h4>
                 </div>
             </div>
-            <div class="relative flex flex-col justify-around h-screen w-screen md:w-full">
+            <div class="relative flex flex-col justify-around min-h-screen w-full mb-5">
                 <h1 class=" mb-0 md:mb-9 text-gray-800 font-normal sm:font-light text-center tracking-wider text-4xl sm:text-6xl md:text-7xl">
                     {{ __('Public gallery') }}
                 </h1>
-                <div class="relative min-h-80 bg-green-500 rounded-lg drop-shadow-lg">
-                    <x-carrousel.projects-carrousel/>
-                </div>
+                <x-carrousel.projects-carrousel/>
             </div>
-            <div class="relative flex flex-col justify-around h-screen w-screen md:w-full my-4">
+            <div class="relative flex flex-col justify-around h-screen w-full my-4">
                 <h1 class=" mb-0 md:mb-9 text-gray-800 font-normal sm:font-light text-center tracking-wider text-4xl sm:text-6xl md:text-7xl">
                     {{ __('How to use') }}
                 </h1>

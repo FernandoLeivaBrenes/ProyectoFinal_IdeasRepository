@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware(['auth:sanctum'])->get('/randomPublicProjects', [ProjectController::class, 'publicCollection_5']);
+Route::middleware(['auth:sanctum'])->get('/randomPublicProjects', [ProjectController::class, 'publicCollection_6']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
