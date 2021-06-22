@@ -94,6 +94,12 @@ git clone https://github.com/FernandoLeivaBrenes/ProyectoFinal.git
 <a name="usandodocker"></a>
 ### Usando Docker (ejecución inicial)
 
+Comprobaremos los permisos en los siguientes archivos y directorios:
+
+> [IdeasRepository/initial_install/intall.sh](https://github.com/FernandoLeivaBrenes/ProyectoFinal_IdeasRepository/blob/master/IdeasRepository/initial_install/install.sh "install.sh")
+> 
+> [IdeasRepository/bootstrap/cache](https://github.com/FernandoLeivaBrenes/ProyectoFinal_IdeasRepository/blob/master/IdeasRepository/bootstrap/cache "cache directory")
+
 1. Descargar e instalar Docker como se explica en su documentación según que sistema operativo vayas a usar.
 
 <a name="ubuntu"></a>
