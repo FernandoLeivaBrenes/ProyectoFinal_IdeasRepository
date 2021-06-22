@@ -13,6 +13,11 @@ if [ ! -f ".env" ]; then
     php artisan key:generate
 fi
 
+# If directory ./storage/app/livewire-tmp/ is not there, create it
+if [ ! -d "./storage/app/livewire-tmp/" ]; then
+    mkdir ./storage/app/livewire-tmp/
+fi
+
 # Check if mysql its healthy
 wait-for-it -h ideasrepository-mysql -p 3306 -t 50
 
