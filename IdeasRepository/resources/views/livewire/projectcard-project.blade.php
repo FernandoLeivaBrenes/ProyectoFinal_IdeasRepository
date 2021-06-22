@@ -1,7 +1,7 @@
 <div x-data="{ openUserInfo: true, toggle() { this.openUserInfo = ! this.openUserInfo } }" class="relative flex justify-around flex-col items-center my-6 md:my-20">
     {{-- Down text content and shows user info --}}
     <div :class="{'animate-bounce' : !openUserInfo}" class="flex justify-center -mb-8 z-30 transform hover:translate-y-1">
-        <img @click="toggle()" class="w-18 h-18 md:w-24 md:h-24 object-cover rounded-full | border border-gray-700 hover:border-{{ $project['access'] }}-500 shadow-md" src="{{ $project['userProfileImage'] }}" alt="profile users" loading="lazy">
+        <img @click="toggle()" class="w-20 h-20 md:w-24 md:h-24 object-cover rounded-full | border border-gray-700 hover:border-{{ $project['access'] }}-500 shadow-md" src="{{ $project['userProfileImage'] }}" alt="profile users" loading="lazy">
     </div>
     <div class="relative shadow-lg rounded-lg overflow-hidden z-0">
         <div class="absolute flex flex-col justify-evenly items-center min-w-full min-h-full top-0 rounded-lg bg-gray-800 py-4">
