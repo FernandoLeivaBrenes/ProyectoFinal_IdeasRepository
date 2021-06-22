@@ -4,7 +4,7 @@
 composer install -q --no-ansi --no-interaction --no-progress --prefer-dist
 
 # Change permits of following directories (they have to be written by others)
-chmod -R o+w ./storage/framework/sessions/ ./storage/framework/testing/ ./storage/framework/views/ ./storage/framework/cache/ ./storage/logs/
+chmod -R o+w ./storage/framework/sessions/ ./storage/framework/testing/ ./storage/framework/views/ ./storage/framework/cache/ ./storage/logs/ ./bootstrap/cache
 
 # If file .env is not there, create it and apply Laravel keys on it
 if [ ! -f ".env" ]; then
