@@ -21,5 +21,8 @@ fi
 # Check if mysql its healthy
 wait-for-it -h ideasrepository-mysql -p 3306 -t 50
 
+# Clear application cache
+php artisan optimize:clear
+
 # Make migrations to database and seed them.
 php artisan migrate:fresh --seed || php artisan migrate
